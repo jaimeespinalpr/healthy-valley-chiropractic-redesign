@@ -21,20 +21,20 @@ export const benefits = ['BENEFITS', 'HISTORY', 'TRAINING'];
 
 export const services = [
   {
-    title: 'CORRECTIVE CARE',
-    description: 'Contact us today to see how we can help you feel better today.',
+    title: 'Back Pain Treatment',
+    description: 'If you are living with chronic back pain then chiropractic care in State College might be a good treatment option.',
     image: '/images/service-chiropractic-care@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/back-pain/',
   },
   {
-    title: 'PEDIATRIC CARE',
-    description: 'Contact us today to see how we can help you feel better today.',
+    title: 'Chiropractic for Kids',
+    description: 'A child\'s nervous system is the controller and regulator of all the other systems in their growing body.',
     image: '/images/services-pediatric-chiropractic@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
   },
   {
-    title: 'WELLNESS CARE',
-    description: 'Contact us today to see how we can help you feel better today.',
+    title: 'Wellness Care',
+    description: 'Just because you don\'t feel sick, does not mean you feel as great as you could.',
     image: '/images/services-pregnancy-chiropractic@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
   },
