@@ -75,7 +75,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
         <div class="relative">
           <div class="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
             <figure class="panel overflow-hidden">
-              <img src={asset('/images/front-desk-wide.jpg')} alt="Welcoming front desk and office interior" class="h-full min-h-[380px] w-full object-cover" />
+              <img src={asset('/images/front-desk-wide.jpg')} alt="Dr. James Yonushonis portrait" class="h-full min-h-[380px] w-full object-cover" />
               <figcaption class="border-t border-white/10 px-5 py-4 text-sm text-slate-200">
                 Our approach: root cause + long-term wellness
               </figcaption>
@@ -83,10 +83,10 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
 
             <div class="grid gap-4">
               <figure class="panel overflow-hidden">
-                <img src={asset('/images/dr-adjusting-patient-neck.jpg')} alt="Dr. Jay Villella adjusting a patient" class="h-48 w-full object-cover" />
+                <img src={asset('/images/dr-adjusting-patient-neck.jpg')} alt="About Us circle portrait" class="h-48 w-full object-cover" />
               </figure>
               <figure class="panel overflow-hidden">
-                <img src={asset('/images/staff-wide.jpg')} alt="Healthy Valley Chiropractic team" class="h-48 w-full object-cover" />
+                <img src={asset('/images/staff-wide.jpg')} alt="Testimonial image from the original site" class="h-48 w-full object-cover" />
               </figure>
             </div>
           </div>
@@ -131,7 +131,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
           {services.map((service) => (
             <a href={service.href} class="card group block" target="_blank" rel="noreferrer">
               <div class="card-media">
-                <img src={service.image} alt={service.title} loading="lazy" />
+                <img src={asset(service.image)} alt={service.title} />
               </div>
               <div class="space-y-3 p-5">
                 <h3 class="text-xl font-semibold text-white group-hover:text-teal-200">{service.title}</h3>
@@ -146,7 +146,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
     <section id="why" class="section">
       <div class="shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div class="panel overflow-hidden">
-          <img src={asset('/images/our-approach-bg.jpg')} alt="Clinical approach background" class="h-full min-h-[420px] w-full object-cover" />
+          <img src={asset('/images/our-approach-bg.jpg')} alt="Healthy Valley Chiropractic header banner" class="h-full min-h-[420px] w-full object-cover" />
         </div>
 
         <div>
@@ -184,7 +184,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
             {team.map((member) => (
               <article class="card">
                 <div class="card-media">
-                  <img src={asset(member.image)} alt={member.name} loading="lazy" />
+                  <img src={asset(member.image)} alt={member.name} />
                 </div>
                 <div class="space-y-3 p-5">
                   <p class="kicker">{member.role}</p>
@@ -196,7 +196,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
           </div>
 
           <div class="panel overflow-hidden">
-            <img src={asset('/images/dr-jay-explaining-decompression.jpg')} alt="Dr. Jay Villella explaining decompression" class="h-64 w-full object-cover sm:h-80" />
+            <img src={asset('/images/dr-jay-explaining-decompression.jpg')} alt="Corrective care image from the original site" class="h-64 w-full object-cover sm:h-80" />
             <div class="space-y-4 p-6 sm:p-7">
               <span class="eyebrow">Patient-centered care</span>
               <p class="text-lg leading-8 text-slate-200">
@@ -227,7 +227,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
           {gallery.map((shot) => (
             <figure class="card overflow-hidden">
               <div class="card-media aspect-[4/5]">
-                <img src={asset(shot.image)} alt={shot.caption} loading="lazy" />
+                <img src={asset(shot.image)} alt={shot.caption} />
               </div>
               <figcaption class="border-t border-white/10 px-5 py-4 text-sm text-slate-300">{shot.caption}</figcaption>
             </figure>

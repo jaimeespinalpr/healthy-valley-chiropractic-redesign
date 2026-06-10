@@ -15,59 +15,29 @@ export const heroHighlights = [
 
 export const stats = [
   { value: '25+', label: 'años sirviendo a la comunidad' },
-  { value: '8', label: 'servicios destacados en la home' },
+  { value: '3', label: 'servicios clave del sitio original' },
   { value: 'Mon–Thu', label: 'horario de oficina' },
   { value: '4.9★', label: 'confianza y reputación local' },
 ];
 
 export const services = [
   {
-    title: 'Chiropractic care',
-    description: 'Cuidado base para dolor, movilidad y bienestar a largo plazo.',
+    title: 'Corrective care',
+    description: 'Back pain and alignment-focused care from the original homepage.',
     image: '/images/service-chiropractic-care@2x.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/chiropractic-care/',
+    href: 'https://www.healthyvalleychiropractic.com/back-pain/',
   },
   {
-    title: 'Spinal decompression',
-    description: 'Una opción especializada para discos y dolor de espalda crónico.',
-    image: '/images/service-spinal-descompression@2x.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/spinal-decompression/',
-  },
-  {
-    title: 'Pediatric chiropractic',
-    description: 'Un enfoque cálido y familiar para niños y adolescentes.',
+    title: 'Pediatric care',
+    description: 'Gentle chiropractic care for kids, based on the source site.',
     image: '/images/services-pediatric-chiropractic@2x.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/pediatric/',
+    href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
   },
   {
-    title: 'Sports chiropractic',
-    description: 'Soporte para atletas, entrenamiento y recuperación de sobrecargas.',
-    image: '/images/services-sports-chiropractic@2x.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/sports-chiropractic/',
-  },
-  {
-    title: 'Pregnancy care',
-    description: 'Atención suave para los cambios del embarazo y la postura.',
+    title: 'Wellness care',
+    description: 'Preventative wellness and maintenance care from the source site.',
     image: '/images/services-pregnancy-chiropractic@2x.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/pregnancy/',
-  },
-  {
-    title: 'Workplace injuries',
-    description: 'Apoyo práctico para dolor por trabajo, postura y esfuerzo diario.',
-    image: '/images/Services-Workplace-Injuries-Hover@2X.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/workplace-injuries/',
-  },
-  {
-    title: 'Auto accident care',
-    description: 'Un siguiente paso claro después de un accidente automovilístico.',
-    image: '/images/Services-Auto-Accident-Chiropractic-Hover@2X.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/auto-accident-chiropractic-care/',
-  },
-  {
-    title: 'Extremity adjusting',
-    description: 'Cuidado para manos, hombros, caderas, rodillas y tobillos.',
-    image: '/images/services-extremity-adjusting@2x.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/extremity-adjusting/',
+    href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
   },
 ];
 
@@ -92,24 +62,24 @@ export const reasons = [
 
 export const team = [
   {
-    name: 'Dr. Jay Villella',
-    role: 'Lead clinician',
+    name: 'Dr. James Yonushonis, D.C.',
+    role: 'Lead chiropractor',
     image: '/images/dr-jay.jpg',
-    copy: 'La cara principal de la práctica y la referencia del enfoque de cuidado a largo plazo.',
+    copy: 'The doctor featured in the original About Us page and the clinic’s main face.',
   },
   {
-    name: 'Dr. Craig Baniszewski',
-    role: 'Clinical support',
+    name: 'Healthy Valley Chiropractic',
+    role: 'Source imagery',
     image: '/images/dr-craig-baniszewski.jpg',
-    copy: 'Refuerza la experiencia centrada en el paciente con una atención cercana y profesional.',
+    copy: 'A supporting source image pulled from the original site’s About Us / testimonial assets.',
   },
 ];
 
 export const gallery = [
-  { image: '/images/front-desk-wide.jpg', caption: 'Recepción y primera impresión' },
-  { image: '/images/staff-wide.jpg', caption: 'Equipo y ambiente de oficina' },
-  { image: '/images/dr-adjusting-patient-neck.jpg', caption: 'Atención en consulta' },
-  { image: '/images/practice-sign.jpg', caption: 'Presencia local en State College' },
+  { image: '/images/front-desk-wide.jpg', caption: 'Doctor portrait / homepage feature' },
+  { image: '/images/staff-wide.jpg', caption: 'Testimonial / supporting imagery' },
+  { image: '/images/dr-adjusting-patient-neck.jpg', caption: 'About us circle image' },
+  { image: '/images/practice-sign.jpg', caption: 'Sidebar / local branding asset' },
 ];
 
 export const testimonials = [
