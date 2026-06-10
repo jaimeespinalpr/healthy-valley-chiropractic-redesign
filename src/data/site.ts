@@ -1,8 +1,8 @@
 export const navLinks = [
   { label: 'Home', href: '#top' },
+  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Hours', href: '#hours' },
-  { label: 'Care', href: '#care' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -53,11 +53,11 @@ export const supportPoints = [
   '(814) 810-3395',
 ];
 
-export const gallery = [
-  { image: '/images/dr-jay.jpg', caption: 'Chiropractor State College PA James Yonushonis' },
-  { image: '/images/dr-jay-explaining-decompression.jpg', caption: 'Chiropractor State College PA James Yonushonis' },
-  { image: '/images/staff-wide.jpg', caption: 'Chiropractor State College PA James Yonushonis' },
-  { image: '/images/front-desk-wide.jpg', caption: 'Chiropractic State Valley PA Healthy Valley Chiropractic scroll' },
+export const aboutLinks = [
+  { label: 'Meet the Doctor', href: 'https://www.healthyvalleychiropractic.com/us/' },
+  { label: 'Testimonials', href: 'https://www.healthyvalleychiropractic.com/testimonials/' },
+  { label: 'Office Tour', href: 'https://www.healthyvalleychiropractic.com/office-tour/' },
+  { label: 'Patient Portal', href: 'https://theschedulingapp.com/HealthyValleyChiropractic' },
 ];
 
 export const quote = {
@@ -86,7 +86,7 @@ export const footerLinks = [
 
 export const socialLinks = [
   { label: 'Facebook', href: 'https://www.facebook.com/Healthy-Valley-Chiropractic-107107287854703' },
-  { label: 'Instagram', href: 'https://www.instagram.com/healthyvalleychiropractic' },
-  { label: 'YouTube', href: 'https://www.youtube.com/channel/UC2IrW2Zr7tKs2SVIDAzsgHw/videos' },
   { label: 'Twitter', href: 'https://twitter.com/healthy_valley' },
+  { label: 'YouTube', href: 'https://www.youtube.com/channel/UC2IrW2Zr7tKs2SVIDAzsgHw/videos' },
+  { label: 'Instagram', href: 'https://www.instagram.com/healthyvalleychiropractic' },
 ];
