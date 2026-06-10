@@ -1,41 +1,41 @@
 export const navLinks = [
-  { label: 'Servicios', href: '#services' },
-  { label: 'Por qué elegirnos', href: '#why' },
-  { label: 'Equipo', href: '#team' },
-  { label: 'Galería', href: '#gallery' },
-  { label: 'Testimonios', href: '#testimonials' },
-  { label: 'Contacto', href: '#contact' },
+  { label: 'Services', href: '#services' },
+  { label: 'Why Choose Us', href: '#why' },
+  { label: 'Team', href: '#team' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Reviews', href: '#testimonials' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export const heroHighlights = [
-  'Desde 1998 en State College',
-  'Atención para toda la familia',
-  'Seguro médico aceptado',
+  'Back pain care',
+  'Chiropractic care for kids',
+  'Wellness care',
 ];
 
 export const stats = [
-  { value: '25+', label: 'años sirviendo a la comunidad' },
-  { value: '3', label: 'servicios clave del sitio original' },
-  { value: 'Mon–Thu', label: 'horario de oficina' },
-  { value: '4.9★', label: 'confianza y reputación local' },
+  { value: '(814) 810-3395', label: 'Phone' },
+  { value: '403 South Allen Street #112A', label: 'Address' },
+  { value: 'Mon–Thu', label: 'Office days' },
+  { value: 'Cash + credit card', label: 'Accepted payment methods' },
 ];
 
 export const services = [
   {
-    title: 'Corrective care',
-    description: 'Back pain and alignment-focused care from the original homepage.',
+    title: 'Back pain care',
+    description: 'A dedicated back pain page from the original site.',
     image: '/images/service-chiropractic-care@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/back-pain/',
   },
   {
-    title: 'Pediatric care',
-    description: 'Gentle chiropractic care for kids, based on the source site.',
+    title: 'Chiropractic care for kids',
+    description: 'The original site includes a page for pediatric chiropractic care.',
     image: '/images/services-pediatric-chiropractic@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
   },
   {
     title: 'Wellness care',
-    description: 'Preventative wellness and maintenance care from the source site.',
+    description: 'A dedicated wellness care page on the original site.',
     image: '/images/services-pregnancy-chiropractic@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
   },
@@ -43,43 +43,43 @@ export const services = [
 
 export const reasons = [
   {
-    title: 'Corrección a largo plazo',
-    copy: 'El enfoque de la clínica va más allá del alivio rápido para ayudar al paciente a moverse y sentirse mejor con el tiempo.',
+    title: 'Dedicated service pages',
+    copy: 'The original site includes pages for back pain care, pediatric care, and wellness care.',
   },
   {
-    title: 'Tecnología y tratamiento moderno',
-    copy: 'La combinación de ajuste, descompresión, láser, balance y soporte deportivo aporta una oferta más completa.',
+    title: 'Visible contact details',
+    copy: 'Phone number, address, and office days are shown clearly on the homepage.',
   },
   {
-    title: 'Ubicación clara y accesible',
-    copy: 'Todo lo esencial queda visible: teléfono, dirección, horario y enlaces útiles para pacientes nuevos.',
+    title: 'Payment methods listed',
+    copy: 'The site metadata lists cash and credit card as accepted payment methods.',
   },
   {
-    title: 'Enfoque familiar',
-    copy: 'La comunicación y la visual se orientan a pacientes reales: niños, embarazo, atletas y adultos activos.',
+    title: 'Real clinic imagery',
+    copy: 'The redesign uses images pulled from the original website assets.',
   },
 ];
 
 export const team = [
   {
-    name: 'Dr. James Yonushonis, D.C.',
-    role: 'Lead chiropractor',
+    name: 'James Yonushonis, D.C.',
+    role: 'Chiropractor',
     image: '/images/dr-jay.jpg',
-    copy: 'The doctor featured in the original About Us page and the clinic’s main face.',
+    copy: 'The doctor named in the original About Us page.',
   },
   {
     name: 'Healthy Valley Chiropractic',
-    role: 'Source imagery',
+    role: 'Clinic imagery',
     image: '/images/dr-craig-baniszewski.jpg',
-    copy: 'A supporting source image pulled from the original site’s About Us / testimonial assets.',
+    copy: 'A supporting image pulled from the original site assets.',
   },
 ];
 
 export const gallery = [
-  { image: '/images/front-desk-wide.jpg', caption: 'Doctor portrait / homepage feature' },
-  { image: '/images/staff-wide.jpg', caption: 'Testimonial / supporting imagery' },
-  { image: '/images/dr-adjusting-patient-neck.jpg', caption: 'About us circle image' },
-  { image: '/images/practice-sign.jpg', caption: 'Sidebar / local branding asset' },
+  { image: '/images/front-desk-wide.jpg', caption: 'Doctor portrait' },
+  { image: '/images/staff-wide.jpg', caption: 'Supporting site image' },
+  { image: '/images/dr-adjusting-patient-neck.jpg', caption: 'About Us image' },
+  { image: '/images/practice-sign.jpg', caption: 'Clinic branding asset' },
 ];
 
 export const testimonials = [
@@ -107,20 +107,20 @@ export const testimonials = [
 
 export const faqs = [
   {
-    q: '¿Atienden pacientes nuevos?',
-    a: 'Sí, la clínica está preparada para pacientes nuevos y mantiene visibles los datos de contacto y acceso.',
+    q: 'Do they take new patients?',
+    a: 'The original site includes a New Patient Info page and a Contact page.',
   },
   {
-    q: '¿Aceptan seguro?',
-    a: 'Sí, el sitio original destaca que el seguro es aceptado.',
+    q: 'What payment methods are accepted?',
+    a: 'The site metadata lists cash and credit card.',
   },
   {
-    q: '¿El enfoque es familiar?',
-    a: 'Sí. El contenido original enfatiza niños, embarazo, deportistas y bienestar general.',
-  },
-  {
-    q: '¿Dónde están ubicados?',
+    q: 'Where are they located?',
     a: '403 South Allen Street #112A, State College, PA 16801.',
+  },
+  {
+    q: 'What service pages are on the site?',
+    a: 'Back pain care, chiropractic care for kids, and wellness care.',
   },
 ];
 
