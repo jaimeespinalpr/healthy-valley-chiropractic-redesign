@@ -24,7 +24,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
   description="Healthy Valley Chiropractic in State College, Pennsylvania."
 >
   <main id="top">
-    <header class="sticky top-0 z-50 border-b border-white/70 bg-white/85 backdrop-blur-xl">
+    <header class="sticky top-0 z-50 border-b border-white/70 bg-white/88 backdrop-blur-xl">
       <div class="shell flex items-center justify-between gap-4 py-3 sm:py-4">
         <a href="#top" class="flex items-center gap-3">
           <img
@@ -33,7 +33,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
             class="h-11 w-11 rounded-2xl border border-emerald-950/10 bg-white object-cover shadow-sm"
           />
           <div class="leading-tight">
-            <p class="text-sm font-semibold tracking-tight text-slate-900 sm:text-base">Healthy Valley Chiropractic</p>
+            <p class="text-sm font-semibold tracking-tight text-slate-950 sm:text-base">Healthy Valley Chiropractic</p>
             <p class="text-xs uppercase tracking-[0.22em] text-slate-500">State College, PA</p>
           </div>
         </a>
@@ -59,24 +59,26 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
 
     <section class="section pt-10 sm:pt-14 lg:pt-16">
       <div class="shell grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14">
-        <div>
+        <div class="space-y-8">
           <p class="kicker">Serving The State College Area</p>
-          <h1 class="heading mt-5 max-w-3xl text-4xl leading-[0.95] sm:text-5xl lg:text-6xl">
-            Taking Chiropractic
-            <span class="block text-emerald-700">Care to the Next Level</span>
-          </h1>
-          <p class="subcopy max-w-2xl text-slate-600">
-            Healthy Valley Chiropractic located in State College.
-          </p>
+          <div class="max-w-3xl">
+            <h1 class="heading text-4xl leading-[0.95] sm:text-5xl lg:text-6xl">
+              Taking Chiropractic
+              <span class="block text-emerald-700">Care to the Next Level</span>
+            </h1>
+            <p class="subcopy">
+              Healthy Valley Chiropractic located in State College.
+            </p>
+          </div>
 
-          <div class="mt-8 flex flex-wrap gap-3">
+          <div class="flex flex-wrap gap-3">
             <a href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer" class="button button-primary">
               NEW PATIENT SPECIAL OFFER
             </a>
             <a href="#contact" class="button button-secondary">Contact</a>
           </div>
 
-          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+          <div class="grid gap-3 sm:grid-cols-3 max-w-3xl">
             {heroHighlights.map((item) => (
               <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm">
                 {item}
@@ -84,7 +86,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
             ))}
           </div>
 
-          <div class="mt-8 rounded-[1.5rem] border border-emerald-700/10 bg-emerald-50/80 p-5 shadow-sm">
+          <div class="max-w-2xl rounded-[1.5rem] border border-emerald-700/10 bg-emerald-50/80 p-5 shadow-sm">
             <p class="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-700">No Risk</p>
             <p class="mt-2 text-lg leading-8 text-slate-800">
               There is <span class="font-semibold text-slate-950">No Risk</span> to see what we can do for you.
@@ -93,38 +95,41 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
         </div>
 
         <div class="space-y-4">
-          <div class="grid gap-4">
-            <figure class="panel overflow-hidden">
-              <img src={asset('/images/slide1.jpg')} alt="Chiropractor State College PA James Yonushonis" class="h-56 w-full object-cover sm:h-64" />
-            </figure>
+          <figure class="panel overflow-hidden">
+            <img
+              src={asset('/images/slide1.jpg')}
+              alt="Chiropractor State College PA James Yonushonis"
+              class="h-[22rem] w-full object-cover sm:h-[28rem]"
+              fetchpriority="high"
+            />
+          </figure>
 
-            <div class="grid gap-4 sm:grid-cols-2">
-              <figure class="panel overflow-hidden">
-                <img src={asset('/images/dr-jay.jpg')} alt="Chiropractor State College PA James Yonushonis" class="h-44 w-full object-cover" />
-              </figure>
-              <figure class="panel overflow-hidden">
-                <img src={asset('/images/front-desk-wide.jpg')} alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll" class="h-44 w-full object-cover" />
-              </figure>
-            </div>
-          </div>
-
-          <div class="panel grid gap-4 p-5 sm:grid-cols-2">
-            <div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="panel p-5">
               <p class="muted-label">Office hours</p>
-              <div class="mt-3 space-y-2 text-sm leading-6 text-slate-600">
+              <div class="mt-4 space-y-2 text-sm leading-6 text-slate-600">
                 <p>Monday · 8:00am - 11:30am / 3:00pm - 5:00pm</p>
                 <p>Tuesday · 3:00pm - 5:00pm</p>
                 <p>Wednesday · 8:00am - 11:30am / 3:00pm - 5:00pm</p>
               </div>
             </div>
-            <div class="sm:text-right">
+            <div class="panel p-5">
               <p class="muted-label">Location</p>
-              <p class="mt-3 text-sm leading-7 text-slate-600">
+              <p class="mt-4 text-sm leading-7 text-slate-600">
                 Healthy Valley Chiropractic<br />
                 403 South Allen Street #112A<br />
                 State College, PA 16801
               </p>
             </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <figure class="panel overflow-hidden">
+              <img src={asset('/images/dr-jay.jpg')} alt="Chiropractor State College PA James Yonushonis" class="h-44 w-full object-cover" loading="lazy" />
+            </figure>
+            <figure class="panel overflow-hidden">
+              <img src={asset('/images/front-desk-wide.jpg')} alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll" class="h-44 w-full object-cover" loading="lazy" />
+            </figure>
           </div>
         </div>
       </div>
@@ -133,7 +138,12 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
     <section id="care" class="section pt-4 sm:pt-8 lg:pt-10">
       <div class="shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div class="panel overflow-hidden">
-          <img src={asset('/images/our-approach-bg.jpg')} alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll" class="h-full min-h-[420px] w-full object-cover" />
+          <img
+            src={asset('/images/our-approach-bg.jpg')}
+            alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll"
+            class="h-full min-h-[420px] w-full object-cover"
+            loading="lazy"
+          />
         </div>
 
         <div>
@@ -176,7 +186,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
           {services.map((service, index) => (
             <a href={service.href} class="card group block h-full" target="_blank" rel="noreferrer">
               <div class="card-media relative aspect-[4/3]">
-                <img src={asset(service.image)} alt={service.title} />
+                <img src={asset(service.image)} alt={service.title} loading="lazy" />
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-transparent"></div>
                 <div class="absolute inset-x-0 bottom-0 p-5">
                   <p class="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">0{index + 1}</p>
@@ -193,7 +203,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
     </section>
 
     <section id="hours" class="section">
-      <div class="shell grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <div class="shell grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
         <div class="panel bg-white p-6 sm:p-8">
           <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -236,7 +246,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
           <div class="panel bg-white p-6 sm:p-8">
             <div class="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
               {supportPoints.map((item) => (
-                <div class="soft-card">{item}</div>
+                <div class="soft-card bg-slate-50">{item}</div>
               ))}
             </div>
           </div>
@@ -257,7 +267,7 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
           {gallery.map((shot) => (
             <figure class="card overflow-hidden bg-white">
               <div class="card-media aspect-[4/5]">
-                <img src={asset(shot.image)} alt={shot.caption} />
+                <img src={asset(shot.image)} alt={shot.caption} loading="lazy" />
               </div>
               <figcaption class="border-t border-slate-200 px-5 py-4 text-sm text-slate-600">
                 {shot.caption}
@@ -269,13 +279,18 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
     </section>
 
     <section id="contact" class="section pt-0">
-      <div class="shell grid gap-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+      <div class="shell grid gap-6 xl:grid-cols-[1.02fr_0.98fr] xl:items-start">
         <div class="panel overflow-hidden bg-white">
           <div class="relative">
-            <img src={asset('/images/contact-us-bg.jpg')} alt="Chiropractor State College PA James Yonushonis" class="h-72 w-full object-cover sm:h-80" />
+            <img
+              src={asset('/images/contact-us-bg.jpg')}
+              alt="Chiropractor State College PA James Yonushonis"
+              class="h-72 w-full object-cover sm:h-80"
+              loading="lazy"
+            />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-              <span class="eyebrow text-white/90 border-white/15 bg-white/10">CONTACT</span>
+              <span class="eyebrow border-white/15 bg-white/10 text-white/90">CONTACT</span>
               <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Healthy Valley Chiropractic</h2>
             </div>
           </div>
@@ -308,10 +323,20 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
             src={asset('/images/practice-sign.jpg')}
             alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll"
             class="h-64 w-full bg-slate-50 object-contain p-4 sm:h-72"
+            loading="lazy"
           />
           <div class="space-y-4 p-6 sm:p-8">
             <span class="eyebrow">Map</span>
             <p class="text-xl font-semibold tracking-tight text-slate-950">Open the office in Google Maps.</p>
+            <div class="soft-card overflow-hidden p-0">
+              <iframe
+                title="Healthy Valley Chiropractic location"
+                src={contact.mapSrc}
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="h-72 w-full border-0"
+              ></iframe>
+            </div>
             <div class="soft-card bg-slate-50 text-sm leading-7 text-slate-700">
               <p class="font-semibold text-slate-950">Healthy Valley Chiropractic</p>
               <p>{contact.address}</p>
@@ -330,9 +355,9 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 bg-white/70 py-8 backdrop-blur-sm">
-    <div class="shell space-y-5 text-sm text-slate-500">
-      <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+  <footer class="border-t border-slate-200 bg-white/80 py-10 backdrop-blur-sm">
+    <div class="shell space-y-8 text-sm text-slate-500">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
         <div class="space-y-3">
           <div>
             <p class="font-semibold text-slate-900">Healthy Valley Chiropractic</p>
@@ -346,13 +371,15 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
             ))}
           </div>
         </div>
-        <a class="text-slate-700 hover:text-slate-950" href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer">
+
+        <a class="button button-primary w-fit" href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer">
           NEW PATIENT SPECIAL OFFER
         </a>
       </div>
-      <div class="flex flex-wrap gap-x-4 gap-y-2 border-t border-slate-200 pt-4">
+
+      <div class="grid gap-3 border-t border-slate-200 pt-5 sm:grid-cols-2 lg:grid-cols-4">
         {footerLinks.map((link) => (
-          <a class="text-slate-600 hover:text-slate-950" href={link.href} target="_blank" rel="noreferrer">
+          <a class="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-600 hover:border-slate-300 hover:text-slate-950" href={link.href} target="_blank" rel="noreferrer">
             {link.label}
           </a>
         ))}
