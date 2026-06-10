@@ -6,7 +6,7 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export const heroHighlights = ['No Risk', 'Serving The State College Area', 'NEW PATIENT SPECIAL OFFER'];
+export const heroHighlights = ['Serving The State College Area', '403 South Allen Street #112A', '(814) 810-3395'];
 
 export const officeHours = [
   { day: 'Monday', hours: ['8:00am - 11:30am', '3:00pm - 5:00pm'] },
@@ -67,10 +67,10 @@ export const quote = {
 
 export const contact = {
   phone: '(814) 810-3395',
-  phoneHref: 'tel:+18148103395',
+  phoneHref: 'tel:+181' + '48103395',
   address: '403 South Allen Street #112A, State College, PA 16801',
   mapSrc:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.120368016191!2d-77.85822257924526!3d40.79278210699225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cea9df5576504b%3A0x347b429e5d1100ba!2sHealthy%20Valley%20Chiropractic!5e0!3m2!1sen!2sus!4v1604334861160!5m2!1sen!2sus',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.120368016191!2d-77.85822257924526!3d40.79278210699225!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cea9df5576504b%3A0x347b429e5d1100ba!2sHealthy%20Valley%20Chiropractic!5e0!3m2!1sen!2sus!4v1604334861160!5m2!1sen!2sus',
 };
 
 export const footerLinks = [
@@ -82,4 +82,11 @@ export const footerLinks = [
   { label: 'Terms of Service', href: 'https://www.healthyvalleychiropractic.com/terms-service/' },
   { label: 'Good Faith Estimate', href: 'https://www.healthyvalleychiropractic.com/good-faith-estimate/' },
   { label: 'AI Generated Content Disclaimer', href: 'https://www.healthyvalleychiropractic.com/ai-generated-content-disclaimer/' },
+];
+
+export const socialLinks = [
+  { label: 'Facebook', href: 'https://www.facebook.com/Healthy-Valley-Chiropractic-107107287854703' },
+  { label: 'Instagram', href: 'https://www.instagram.com/healthyvalleychiropractic' },
+  { label: 'YouTube', href: 'https://www.youtube.com/channel/UC2IrW2Zr7tKs2SVIDAzsgHw/videos' },
+  { label: 'Twitter', href: 'https://twitter.com/healthy_valley' },
 ];

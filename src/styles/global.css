@@ -10,11 +10,11 @@
   }
 
   body {
-    @apply bg-emerald-50 text-slate-900 antialiased;
+    @apply bg-slate-50 text-slate-900 antialiased;
     background-image:
       radial-gradient(circle at top left, rgba(16, 185, 129, 0.12), transparent 28%),
-      radial-gradient(circle at top right, rgba(20, 184, 166, 0.08), transparent 26%),
-      linear-gradient(180deg, #f8faf8 0%, #eff6f1 52%, #f8faf8 100%);
+      radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 26%),
+      linear-gradient(180deg, #f9fafb 0%, #f3f7f4 56%, #f8fafc 100%);
   }
 
   ::selection {
@@ -33,15 +33,16 @@
 
 @layer components {
   .shell {
-    @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
   }
 
   .section {
-    @apply py-20 sm:py-24;
+    @apply py-16 sm:py-20 lg:py-24;
+    scroll-margin-top: 5.5rem;
   }
 
   .panel {
-    @apply rounded-[2rem] border border-white/80 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.08)];
+    @apply rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)];
   }
 
   .eyebrow {
@@ -49,7 +50,7 @@
   }
 
   .heading {
-    @apply text-balance tracking-tight text-slate-950;
+    @apply text-balance font-semibold tracking-tight text-slate-950;
   }
 
   .subcopy {
@@ -69,7 +70,7 @@
   }
 
   .card {
-    @apply overflow-hidden rounded-[1.75rem] border border-white/80 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_64px_rgba(15,23,42,0.12)];
+    @apply overflow-hidden rounded-[1.75rem] border border-slate-200/80 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_64px_rgba(15,23,42,0.12)];
   }
 
   .card-media {
@@ -86,5 +87,13 @@
 
   .kicker {
     @apply text-sm font-medium uppercase tracking-[0.25em] text-emerald-700;
+  }
+
+  .muted-label {
+    @apply text-xs font-semibold uppercase tracking-[0.28em] text-slate-500;
+  }
+
+  .soft-card {
+    @apply rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm;
   }
 }
