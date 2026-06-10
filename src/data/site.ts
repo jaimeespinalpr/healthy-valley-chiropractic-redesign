@@ -1,134 +1,85 @@
 export const navLinks = [
+  { label: 'Home', href: '#top' },
   { label: 'Services', href: '#services' },
-  { label: 'Why Choose Us', href: '#why' },
-  { label: 'Team', href: '#team' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Reviews', href: '#testimonials' },
+  { label: 'Hours', href: '#hours' },
+  { label: 'Care', href: '#care' },
   { label: 'Contact', href: '#contact' },
 ];
 
-export const heroHighlights = [
-  'Back pain care',
-  'Chiropractic care for kids',
-  'Wellness care',
+export const heroHighlights = ['No Risk', 'Serving The State College Area', 'NEW PATIENT SPECIAL OFFER'];
+
+export const officeHours = [
+  { day: 'Monday', hours: ['8:00am - 11:30am', '3:00pm - 5:00pm'] },
+  { day: 'Tuesday', hours: ['3:00pm - 5:00pm'] },
+  { day: 'Wednesday', hours: ['8:00am - 11:30am', '3:00pm - 5:00pm'] },
+  { day: 'Thursday', hours: ['3:00pm - 5:00pm'] },
+  { day: 'Friday', hours: ['8:00am - 11:30am'] },
+  { day: 'Saturday', hours: ['Closed'] },
 ];
 
-export const stats = [
-  { value: '(814) 810-3395', label: 'Phone' },
-  { value: '403 South Allen Street #112A', label: 'Address' },
-  { value: 'Mon–Thu', label: 'Office days' },
-  { value: 'Cash + credit card', label: 'Accepted payment methods' },
-];
+export const benefits = ['BENEFITS', 'HISTORY', 'TRAINING'];
 
 export const services = [
   {
-    title: 'Back pain care',
-    description: 'A dedicated back pain page from the original site.',
+    title: 'CORRECTIVE CARE',
+    description: 'Contact us today to see how we can help you feel better today.',
     image: '/images/service-chiropractic-care@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/back-pain/',
   },
   {
-    title: 'Chiropractic care for kids',
-    description: 'The original site includes a page for pediatric chiropractic care.',
+    title: 'PEDIATRIC CARE',
+    description: 'Contact us today to see how we can help you feel better today.',
     image: '/images/services-pediatric-chiropractic@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
   },
   {
-    title: 'Wellness care',
-    description: 'A dedicated wellness care page on the original site.',
+    title: 'WELLNESS CARE',
+    description: 'Contact us today to see how we can help you feel better today.',
     image: '/images/services-pregnancy-chiropractic@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
   },
 ];
 
-export const reasons = [
-  {
-    title: 'Dedicated service pages',
-    copy: 'The original site includes pages for back pain care, pediatric care, and wellness care.',
-  },
-  {
-    title: 'Visible contact details',
-    copy: 'Phone number, address, and office days are shown clearly on the homepage.',
-  },
-  {
-    title: 'Payment methods listed',
-    copy: 'The site metadata lists cash and credit card as accepted payment methods.',
-  },
-  {
-    title: 'Real clinic imagery',
-    copy: 'The redesign uses images pulled from the original website assets.',
-  },
+export const introCopy = [
+  'Welcome to Healthy Valley Chiropractic located in State College. Chiropractic is one of the most amazing healthcare professions, but very few people understand what it\'s all about. This article is here to help you gain a basic understanding of how our State College chiropractors can help you and your family.',
+  'Chiropractic care is the practice of using spinal alignment to alleviate a wide variety of physical ailments, including muscle strain, neck pain, chronic back pain, and more. This is accomplished by adjusting the position of the spinal column to its proper shape, providing a non-invasive solution for pain relief.',
+  'At Healthy Valley Chiropractic our chiropractic team is ready to meet with you to discuss your needs. We will help to design a program that is right for you. We look forward to meeting you.',
 ];
 
-export const team = [
-  {
-    name: 'James Yonushonis, D.C.',
-    role: 'Chiropractor',
-    image: '/images/dr-jay.jpg',
-    copy: 'The doctor named in the original About Us page.',
-  },
-  {
-    name: 'Healthy Valley Chiropractic',
-    role: 'Clinic imagery',
-    image: '/images/dr-craig-baniszewski.jpg',
-    copy: 'A supporting image pulled from the original site assets.',
-  },
+export const supportPoints = [
+  'Healthy Valley Chiropractic',
+  '403 South Allen Street #112A',
+  'State College, PA 16801',
+  '(814) 810-3395',
 ];
 
 export const gallery = [
-  { image: '/images/front-desk-wide.jpg', caption: 'Doctor portrait' },
-  { image: '/images/staff-wide.jpg', caption: 'Supporting site image' },
-  { image: '/images/dr-adjusting-patient-neck.jpg', caption: 'About Us image' },
-  { image: '/images/practice-sign.jpg', caption: 'Clinic branding asset' },
+  { image: '/images/dr-jay.jpg', caption: 'Chiropractor State College PA James Yonushonis' },
+  { image: '/images/dr-jay-explaining-decompression.jpg', caption: 'Chiropractor State College PA James Yonushonis' },
+  { image: '/images/staff-wide.jpg', caption: 'Chiropractor State College PA James Yonushonis' },
+  { image: '/images/front-desk-wide.jpg', caption: 'Chiropractic State Valley PA Healthy Valley Chiropractic scroll' },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      'There is no facility, gym, practice, or membership that will produce a higher return on your investment, for your health, than Dr. Jay and his thoughtful team.',
-    author: 'AJ M.',
-  },
-  {
-    quote:
-      'Healthy Valley Chiropractic is always on the cutting edge of technology and treatments. Not to mention the community support and of course the loyal support to the State College Marauders.',
-    author: 'Matt S.',
-  },
-  {
-    quote:
-      'Over the past several months, Healthy Valley Chiropractic has helped improve them all! Listening & caring team, from the front desk to all the docs.',
-    author: 'Pat T.',
-  },
-  {
-    quote:
-      'Only good things to say about Healthy Valley Chiropractic. Their attention to their patients is impeccable. I walked in pain and they have me on the road to recovery.',
-    author: 'Casca M.',
-  },
-];
-
-export const faqs = [
-  {
-    q: 'Do they take new patients?',
-    a: 'The original site includes a New Patient Info page and a Contact page.',
-  },
-  {
-    q: 'What payment methods are accepted?',
-    a: 'The site metadata lists cash and credit card.',
-  },
-  {
-    q: 'Where are they located?',
-    a: '403 South Allen Street #112A, State College, PA 16801.',
-  },
-  {
-    q: 'What service pages are on the site?',
-    a: 'Back pain care, chiropractic care for kids, and wellness care.',
-  },
-];
+export const quote = {
+  author: 'HIPPOCRATES',
+  text: 'A wise man ought to realize that his health is his most valuable possession.',
+};
 
 export const contact = {
   phone: '(814) 810-3395',
   phoneHref: 'tel:+18148103395',
   address: '403 South Allen Street #112A, State College, PA 16801',
-  hours: 'Mon–Thu · 8:30am–6:15pm',
   mapSrc:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.120368016191!2d-77.85822257924526!3d40.79278210699225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cea9df5576504b%3A0x347b429e5d1100ba!2sHealthy%20Valley%20Chiropractic!5e0!3m2!1sen!2sus!4v1604334861160!5m2!1sen!2sus',
 };
+
+export const footerLinks = [
+  { label: 'Accessibility', href: 'https://www.healthyvalleychiropractic.com/accessibility/' },
+  { label: 'Anti-Discrimination', href: 'https://www.healthyvalleychiropractic.com/anti-discrimination/' },
+  { label: 'Healthcare Disclaimer', href: 'https://www.healthyvalleychiropractic.com/healthcare-disclaimer/' },
+  { label: 'HIPAA Policy', href: 'https://www.healthyvalleychiropractic.com/hipaa-privacy-policy/' },
+  { label: 'Privacy Policy', href: 'https://www.healthyvalleychiropractic.com/privacy-policy/' },
+  { label: 'Terms of Service', href: 'https://www.healthyvalleychiropractic.com/terms-service/' },
+  { label: 'Good Faith Estimate', href: 'https://www.healthyvalleychiropractic.com/good-faith-estimate/' },
+  { label: 'AI Generated Content Disclaimer', href: 'https://www.healthyvalleychiropractic.com/ai-generated-content-disclaimer/' },
+];

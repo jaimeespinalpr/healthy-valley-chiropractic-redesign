@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import {
+  benefits,
   contact,
-  faqs,
+  footerLinks,
   gallery,
   heroHighlights,
+  introCopy,
   navLinks,
-  reasons,
+  officeHours,
+  quote,
   services,
-  stats,
-  team,
-  testimonials,
+  supportPoints,
 } from '../data/site';
 
 const base = import.meta.env.BASE_URL;
@@ -18,123 +19,173 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
 ---
 
 <BaseLayout
-  title="Healthy Valley Chiropractic | State College PA"
-  description="A redesign of the Healthy Valley Chiropractic website in State College, PA."
+  title="New Patient Special | Chiropractor State College PA"
+  description="Healthy Valley Chiropractic in State College, Pennsylvania."
 >
-  <main>
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
-      <div class="shell flex items-center justify-between gap-4 py-4">
+  <main id="top">
+    <header class="sticky top-0 z-50 border-b border-white/70 bg-white/90 backdrop-blur-xl">
+      <div class="shell flex items-center justify-between gap-4 py-3 sm:py-4">
         <a href="#top" class="flex items-center gap-3">
-          <img src={asset('/images/logo@2x.png')} alt="Healthy Valley Chiropractic" class="h-11 w-11 rounded-2xl border border-white/10 bg-white/5 object-cover" />
+          <img
+            src={asset('/images/logo@2x.png')}
+            alt="Healthy Valley Chiropractic"
+            class="h-11 w-11 rounded-2xl border border-emerald-950/10 bg-white object-cover shadow-sm"
+          />
           <div class="leading-tight">
-            <p class="text-sm font-semibold text-white">Healthy Valley Chiropractic</p>
-            <p class="text-xs text-slate-400">State College, PA</p>
+            <p class="text-sm font-semibold tracking-tight text-slate-900 sm:text-base">Healthy Valley Chiropractic</p>
+            <p class="text-xs uppercase tracking-[0.22em] text-slate-500">State College, PA</p>
           </div>
         </a>
 
         <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary navigation">
           {navLinks.map((link) => (
-            <a href={link.href} class="text-sm text-slate-300 hover:text-white">
+            <a href={link.href} class="text-sm font-medium text-slate-600 hover:text-slate-950">
               {link.label}
             </a>
           ))}
         </nav>
 
-        <a href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`} class="button button-primary text-xs sm:text-sm">
-          {contact.phone}
-        </a>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href={contact.phoneHref} class="hidden text-sm font-semibold text-slate-700 hover:text-slate-950 sm:inline-flex">
+            {contact.phone}
+          </a>
+          <a href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer" class="button button-primary text-xs sm:text-sm">
+            SCHEDULE
+          </a>
+        </div>
       </div>
     </header>
 
-    <section id="top" class="section pt-10 sm:pt-14">
-      <div class="shell grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+    <section class="section pt-10 sm:pt-14 lg:pt-16">
+      <div class="shell grid items-center gap-10 lg:grid-cols-[1fr_0.95fr] lg:gap-12">
         <div>
-          <span class="eyebrow">Chiropractic care in State College</span>
-          <h1 class="heading mt-6 max-w-3xl">
-            Feel better with a cleaner, friendlier Healthy Valley experience.
+          <p class="kicker">Serving The State College Area</p>
+          <h1 class="heading mt-5 max-w-3xl text-4xl font-semibold uppercase tracking-[-0.04em] text-slate-950 sm:text-5xl lg:text-7xl">
+            Taking Chiropractic
+            <span class="block text-emerald-700">Care to the Next Level</span>
           </h1>
-          <p class="subcopy">
-            This redesign uses only information and images pulled from the original Healthy Valley Chiropractic site.
+          <p class="subcopy max-w-2xl text-slate-600">
+            Healthy Valley Chiropractic located in State College.
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" class="button button-primary">Schedule a visit</a>
-            <a href="#testimonials" class="button button-secondary">See patient testimonials</a>
+            <a href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer" class="button button-primary">
+              NEW PATIENT SPECIAL OFFER
+            </a>
+            <a href="#contact" class="button button-secondary">Contact</a>
           </div>
 
           <div class="mt-8 grid gap-3 sm:grid-cols-3">
             {heroHighlights.map((item) => (
-              <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200">
+              <div class="rounded-2xl border border-emerald-950/10 bg-white px-4 py-3 text-sm font-medium text-slate-700 shadow-sm">
                 {item}
               </div>
             ))}
           </div>
+
+          <div class="mt-8 rounded-[1.75rem] border border-emerald-950/10 bg-emerald-50 p-5 shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-700">No Risk</p>
+            <p class="mt-2 text-lg leading-8 text-slate-800">
+              There is <span class="font-semibold text-slate-950">No Risk</span> to see what we can do for you.
+            </p>
+          </div>
         </div>
 
         <div class="relative">
-          <div class="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
-            <figure class="panel overflow-hidden">
-              <img src={asset('/images/front-desk-wide.jpg')} alt="Dr. James Yonushonis portrait" class="h-full min-h-[380px] w-full object-cover" />
-              <figcaption class="border-t border-white/10 px-5 py-4 text-sm text-slate-200">
-                Our approach: root cause + long-term wellness
-              </figcaption>
+          <div class="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+            <figure class="panel overflow-hidden bg-white">
+              <img src={asset('/images/dr-jay.jpg')} alt="Chiropractor State College PA James Yonushonis" class="h-full min-h-[360px] w-full object-cover" />
             </figure>
 
             <div class="grid gap-4">
-              <figure class="panel overflow-hidden">
-                <img src={asset('/images/dr-adjusting-patient-neck.jpg')} alt="About Us circle portrait" class="h-48 w-full object-cover" />
+              <figure class="panel overflow-hidden bg-white">
+                <img src={asset('/images/staff-wide.jpg')} alt="Chiropractor State College PA James Yonushonis" class="h-44 w-full object-cover" />
               </figure>
-              <figure class="panel overflow-hidden">
-                <img src={asset('/images/staff-wide.jpg')} alt="Testimonial image from the original site" class="h-48 w-full object-cover" />
+              <figure class="panel overflow-hidden bg-white">
+                <img src={asset('/images/front-desk-wide.jpg')} alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll" class="h-44 w-full object-cover" />
               </figure>
             </div>
           </div>
 
-          <div class="panel absolute -bottom-6 left-6 right-6 grid gap-3 border-white/15 bg-slate-950/85 p-5 shadow-2xl shadow-cyan-500/10 sm:grid-cols-2 sm:items-center">
-            <div>
-              <p class="kicker">Office hours</p>
-              <p class="mt-1 text-lg font-semibold text-white">Mon–Thu · 8:30am–6:15pm</p>
-            </div>
-            <div class="sm:text-right">
-              <p class="kicker">Location</p>
-              <p class="mt-1 text-sm text-slate-300">403 South Allen Street #112A, State College, PA 16801</p>
+          <div class="panel absolute -bottom-6 left-5 right-5 border-emerald-950/10 bg-white p-5 shadow-xl shadow-emerald-950/10 sm:left-8 sm:right-8">
+            <div class="grid gap-4 sm:grid-cols-2 sm:items-start">
+              <div>
+                <p class="kicker">Office hours</p>
+                <div class="mt-3 space-y-2 text-sm text-slate-600">
+                  <p>Monday · 8:00am - 11:30am / 3:00pm - 5:00pm</p>
+                  <p>Tuesday · 3:00pm - 5:00pm</p>
+                  <p>Wednesday · 8:00am - 11:30am / 3:00pm - 5:00pm</p>
+                </div>
+              </div>
+              <div class="sm:text-right">
+                <p class="kicker">Location</p>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Healthy Valley Chiropractic<br />
+                  403 South Allen Street #112A<br />
+                  State College, PA 16801
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="shell pb-6">
-      <div class="panel grid gap-4 p-5 md:grid-cols-4 md:p-6">
-        {stats.map((stat) => (
-          <div>
-            <p class="text-2xl font-semibold text-white">{stat.value}</p>
-            <p class="mt-1 text-sm text-slate-400">{stat.label}</p>
+    <section id="care" class="section pt-16 sm:pt-20 lg:pt-24">
+      <div class="shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div class="panel overflow-hidden bg-white">
+          <img src={asset('/images/our-approach-bg.jpg')} alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll" class="h-full min-h-[420px] w-full object-cover" />
+        </div>
+
+        <div>
+          <span class="eyebrow">CHIROPRACTOR STATE COLLEGE PA</span>
+          <h2 class="heading mt-5 max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+            Is chiropractic right for you?
+          </h2>
+          <div class="mt-6 flex flex-wrap gap-2">
+            {benefits.map((item) => (
+              <span class="rounded-full border border-emerald-950/10 bg-white px-4 py-2 text-xs font-semibold tracking-[0.24em] text-slate-600 shadow-sm">
+                {item}
+              </span>
+            ))}
           </div>
-        ))}
+
+          <div class="mt-8 space-y-5">
+            {introCopy.map((paragraph) => (
+              <p class="text-base leading-8 text-slate-600 sm:text-lg">{paragraph}</p>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="services" class="section">
       <div class="shell">
-        <div class="max-w-3xl">
-          <span class="eyebrow">Featured services</span>
-          <h2 class="heading mt-5">The original site’s service pages, presented more clearly.</h2>
-          <p class="subcopy">
-            The new layout keeps the clinic's real service breadth while giving each service a clear image, concise
-            description, and a stronger call to action.
-          </p>
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-3xl">
+            <span class="eyebrow">CHIROPRACTIC CARE CAN HELP</span>
+            <h2 class="heading mt-5 max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+              Contact us today to see how we can help you feel better today.
+            </h2>
+          </div>
+          <a class="button button-secondary w-fit" href="https://www.healthyvalleychiropractic.com/contact-us/" target="_blank" rel="noreferrer">
+            Contact
+          </a>
         </div>
 
-        <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => (
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          {services.map((service, index) => (
             <a href={service.href} class="card group block" target="_blank" rel="noreferrer">
-              <div class="card-media">
+              <div class="card-media relative aspect-[4/3]">
                 <img src={asset(service.image)} alt={service.title} />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 p-5">
+                  <p class="text-xs font-semibold uppercase tracking-[0.28em] text-white/80">0{index + 1}</p>
+                </div>
               </div>
               <div class="space-y-3 p-5">
-                <h3 class="text-xl font-semibold text-white group-hover:text-teal-200">{service.title}</h3>
-                <p class="text-sm leading-6 text-slate-300">{service.description}</p>
+                <h3 class="text-xl font-semibold tracking-tight text-slate-950 group-hover:text-emerald-700">{service.title}</h3>
+                <p class="text-sm leading-7 text-slate-600">{service.description}</p>
               </div>
             </a>
           ))}
@@ -142,68 +193,52 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
       </div>
     </section>
 
-    <section id="why" class="section">
-      <div class="shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <div class="panel overflow-hidden">
-          <img src={asset('/images/our-approach-bg.jpg')} alt="Healthy Valley Chiropractic header banner" class="h-full min-h-[420px] w-full object-cover" />
-        </div>
-
-        <div>
-          <span class="eyebrow">Why choose this site</span>
-          <h2 class="heading mt-5">A simpler presentation of the facts shown on the original site.</h2>
-          <p class="subcopy">
-            The original site includes pages for back pain care, chiropractic care for kids, and wellness care.
-          </p>
-
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-            {reasons.map((item) => (
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-5">
-                <h3 class="text-lg font-semibold text-white">{item.title}</h3>
-                <p class="mt-2 text-sm leading-6 text-slate-300">{item.copy}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="section">
-      <div class="shell">
-        <div class="max-w-3xl">
-          <span class="eyebrow">Team</span>
-          <h2 class="heading mt-5">Strong people, clear roles, and a calmer visual tone.</h2>
-          <p class="subcopy">
-            The design keeps the real doctor names while presenting them in a friendlier, more editorial layout.
-          </p>
-        </div>
-
-        <div class="mt-10 grid gap-5 lg:grid-cols-[1fr_0.95fr]">
-          <div class="grid gap-5 sm:grid-cols-2">
-            {team.map((member) => (
-              <article class="card">
-                <div class="card-media">
-                  <img src={asset(member.image)} alt={member.name} />
-                </div>
-                <div class="space-y-3 p-5">
-                  <p class="kicker">{member.role}</p>
-                  <h3 class="text-2xl font-semibold text-white">{member.name}</h3>
-                  <p class="text-sm leading-6 text-slate-300">{member.copy}</p>
-                </div>
-              </article>
-            ))}
+    <section id="hours" class="section">
+      <div class="shell grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="panel bg-white p-6 sm:p-8">
+          <div class="flex items-end justify-between gap-4">
+            <div>
+              <span class="eyebrow">OFFICE HOURS</span>
+              <h2 class="heading mt-5 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">A clear schedule at a glance.</h2>
+            </div>
+            <p class="hidden text-sm text-slate-500 sm:block">State College, PA</p>
           </div>
 
-          <div class="panel overflow-hidden">
-            <img src={asset('/images/dr-jay-explaining-decompression.jpg')} alt="Corrective care image from the original site" class="h-64 w-full object-cover sm:h-80" />
-            <div class="space-y-4 p-6 sm:p-7">
-              <span class="eyebrow">Original site imagery</span>
-              <p class="text-lg leading-8 text-slate-200">
-                The section uses original site imagery and keeps the wording simple.
-              </p>
-              <div class="grid gap-3 sm:grid-cols-2">
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300">Original doctor name</div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300">Original clinic images</div>
+          <div class="mt-8 divide-y divide-slate-200 overflow-hidden rounded-[1.5rem] border border-slate-200">
+            {officeHours.map((row) => (
+              <div class="grid gap-3 bg-white px-5 py-4 sm:grid-cols-[160px_1fr] sm:items-start">
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">{row.day}</p>
+                <div class="space-y-1 text-sm text-slate-700">
+                  {row.hours.map((hour) => (
+                    <p>{hour}</p>
+                  ))}
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="grid gap-6">
+          <div class="panel bg-white p-6 sm:p-8">
+            <p class="kicker">GET YOUR LIFESTYLE BACK</p>
+            <p class="mt-4 text-2xl leading-10 text-slate-800 sm:text-3xl">
+              You don't have to live in pain. We are here to help you get your life back.
+            </p>
+            <a href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer" class="button button-primary mt-6">
+              NEW PATIENT SPECIAL OFFER
+            </a>
+          </div>
+
+          <blockquote class="panel bg-emerald-50 p-6 sm:p-8">
+            <p class="kicker">{quote.author}</p>
+            <p class="mt-4 text-2xl leading-10 text-slate-800 sm:text-3xl">“{quote.text}”</p>
+          </blockquote>
+
+          <div class="panel bg-white p-6 sm:p-8">
+            <div class="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
+              {supportPoints.map((item) => (
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">{item}</div>
+              ))}
             </div>
           </div>
         </div>
@@ -214,133 +249,104 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
       <div class="shell">
         <div class="max-w-3xl">
           <span class="eyebrow">Gallery</span>
-          <h2 class="heading mt-5">Less repetition, more context.</h2>
-          <p class="subcopy">
-            Each image comes from the original website assets.
-          </p>
+          <h2 class="heading mt-5 max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+            Real imagery, arranged with more breathing room.
+          </h2>
         </div>
 
         <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {gallery.map((shot) => (
-            <figure class="card overflow-hidden">
+            <figure class="card overflow-hidden bg-white">
               <div class="card-media aspect-[4/5]">
                 <img src={asset(shot.image)} alt={shot.caption} />
               </div>
-              <figcaption class="border-t border-white/10 px-5 py-4 text-sm text-slate-300">{shot.caption}</figcaption>
+              <figcaption class="border-t border-slate-200 px-5 py-4 text-sm text-slate-600">{shot.caption}</figcaption>
             </figure>
           ))}
         </div>
       </div>
     </section>
 
-    <section id="testimonials" class="section">
-      <div class="shell">
-        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div class="max-w-3xl">
-            <span class="eyebrow">Reviews</span>
-            <h2 class="heading mt-5">Social proof that feels real, not decorative.</h2>
-            <p class="subcopy">
-              The original clinic had strong review content. Here it is arranged as a modern proof band with more room
-              to breathe.
-            </p>
-          </div>
-          <a class="button button-secondary w-fit" href="https://www.google.com/maps?cid=3781689560041324730" target="_blank" rel="noreferrer">
-            Leave a Google review
-          </a>
-        </div>
-
-        <div class="mt-10 grid gap-5 xl:grid-cols-4">
-          {testimonials.map((review) => (
-            <blockquote class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
-              <div class="text-sm tracking-[0.2em] text-amber-300">★★★★★</div>
-              <p class="mt-4 text-sm leading-7 text-slate-200">{review.quote}</p>
-              <footer class="mt-5 text-sm text-slate-400">— {review.author}</footer>
-            </blockquote>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="shell grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
-        <div class="panel overflow-hidden bg-slate-900/80 p-6 sm:p-8">
-          <span class="eyebrow">FAQ</span>
-          <h2 class="heading mt-5 text-4xl">Quick answers for first-time visitors.</h2>
-          <div class="mt-8 space-y-3">
-            {faqs.map((item) => (
-              <details class="rounded-2xl border border-white/10 bg-white/5 p-5 open:bg-white/8">
-                <summary class="cursor-pointer list-none text-base font-semibold text-white">
-                  {item.q}
-                </summary>
-                <p class="mt-3 text-sm leading-7 text-slate-300">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-
-        <div id="contact" class="panel overflow-hidden">
-          <div class="relative min-h-full">
-            <img src={asset('/images/contact-us-bg.jpg')} alt="Contact background" class="h-72 w-full object-cover sm:h-80" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+    <section id="contact" class="section pt-0">
+      <div class="shell grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+        <div class="panel overflow-hidden bg-white">
+          <div class="relative">
+            <img src={asset('/images/contact-us-bg.jpg')} alt="Chiropractor State College PA James Yonushonis" class="h-72 w-full object-cover sm:h-80" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-              <span class="eyebrow">Contact and location</span>
-              <h2 class="mt-4 text-3xl font-semibold text-white">Get in touch.</h2>
+              <span class="eyebrow">CONTACT</span>
+              <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Healthy Valley Chiropractic</h2>
             </div>
           </div>
 
           <div class="space-y-4 p-6 sm:p-8">
             <div class="grid gap-4 text-sm text-slate-200 sm:grid-cols-2">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p class="text-slate-400">Phone</p>
-                <a class="mt-1 block text-base font-semibold text-white" href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}>
-                  {contact.phone}
-                </a>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <p class="text-slate-500">Phone</p>
+                <a class="mt-1 block text-base font-semibold text-slate-950" href={contact.phoneHref}>{contact.phone}</a>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p class="text-slate-400">Office hours</p>
-                <p class="mt-1 text-base font-semibold text-white">{contact.hours}</p>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <p class="text-slate-500">Address</p>
+                <p class="mt-1 text-base font-semibold text-slate-950">{contact.address}</p>
               </div>
-            </div>
-
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm leading-7 text-slate-300">
-              <p class="text-slate-400">Address</p>
-              <p class="mt-1 text-white">{contact.address}</p>
             </div>
 
             <div class="flex flex-wrap gap-3">
               <a class="button button-primary" href="https://www.healthyvalleychiropractic.com/contact-us/" target="_blank" rel="noreferrer">
                 Contact page
               </a>
-              <a class="button button-secondary" href="https://www.healthyvalleychiropractic.com/new-patients/" target="_blank" rel="noreferrer">
-                New patient info
+              <a class="button button-secondary" href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer">
+                New patient special offer
               </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="shell mt-6">
-        <div class="panel overflow-hidden">
-          <iframe
-            title="Healthy Valley Chiropractic map"
-            src={contact.mapSrc}
-            loading="lazy"
-            class="h-[420px] w-full border-0"
-          ></iframe>
+        <div class="panel overflow-hidden bg-white">
+          <img
+          src={asset('/images/practice-sign.jpg')}
+          alt="Chiropractic State Valley PA Healthy Valley Chiropractic scroll"
+          class="h-72 w-full bg-slate-50 object-contain p-4 sm:h-80"
+          />
+          <div class="space-y-4 p-6 sm:p-8">
+            <span class="eyebrow">Map</span>
+            <p class="text-xl font-semibold tracking-tight text-slate-950">Open the office in Google Maps.</p>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700">
+              <p class="font-semibold text-slate-950">Healthy Valley Chiropractic</p>
+              <p>{contact.address}</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a class="button button-primary" href="https://g.page/healthy-valley-chiropractic?share" target="_blank" rel="noreferrer">
+                Google Maps
+              </a>
+              <a class="button button-secondary" href="https://www.healthyvalleychiropractic.com/contact-us/" target="_blank" rel="noreferrer">
+                Contact page
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="border-t border-white/10 py-8">
-    <div class="shell flex flex-col gap-4 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-      <div>
-        <p class="font-semibold text-slate-200">Healthy Valley Chiropractic</p>
-        <p>State College, Pennsylvania</p>
+    <div class="shell space-y-4 text-sm text-slate-400">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="font-semibold text-slate-200">Healthy Valley Chiropractic</p>
+          <p>State College, Pennsylvania</p>
+        </div>
+        <a class="text-slate-300 hover:text-white" href="https://www.healthyvalleychiropractic.com/special/" target="_blank" rel="noreferrer">
+          NEW PATIENT SPECIAL OFFER
+        </a>
       </div>
-      <a class="text-slate-300 hover:text-white" href="https://www.healthyvalleychiropractic.com/" target="_blank" rel="noreferrer">
-        View the legacy site
-      </a>
+      <div class="flex flex-wrap gap-x-4 gap-y-2">
+        {footerLinks.map((link) => (
+          <a class="text-slate-300 hover:text-white" href={link.href} target="_blank" rel="noreferrer">
+            {link.label}
+          </a>
+        ))}
+      </div>
     </div>
   </footer>
 </BaseLayout>
