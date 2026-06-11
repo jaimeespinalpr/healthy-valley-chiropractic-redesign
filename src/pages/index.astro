@@ -5,6 +5,7 @@ import {
   contact,
   footerLinks,
   galleryCards,
+  heroCards,
   heroHighlights,
   introCopy,
   navLinks,
@@ -18,8 +19,8 @@ const asset = (path) => `${base}${path.replace(/^\//, '')}`;
 
 const heroStats = [
   { label: 'Serving', value: heroHighlights[0] },
-  { label: 'Address', value: heroHighlights[1] },
-  { label: 'Phone', value: heroHighlights[2] },
+  { label: 'Location', value: heroHighlights[1] },
+  { label: 'Call', value: heroHighlights[2] },
 ];
 
 const quickLinks = [
@@ -30,8 +31,8 @@ const quickLinks = [
 
 <BaseLayout
   title="Healthy Valley Chiropractic | State College, PA"
-  description="Healthy Valley Chiropractic provides chiropractic care in State College, Pennsylvania."
-  image="images/slide2.jpg"
+  description="Healthy Valley Chiropractic provides polished, family-friendly chiropractic care in State College, Pennsylvania."
+  image="images/official/meet-the-doctor.jpg"
 >
   <main id="top">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -40,14 +41,10 @@ const quickLinks = [
       <div class="shell grid items-center gap-4 py-4 lg:grid-cols-[auto_1fr_auto] lg:gap-6">
         <a href="#top" class="flex items-center gap-3 self-start">
           <img
-            src={asset('/images/logo@2x.png')}
+            src={asset('/images/official/hero-banner.png')}
             alt="Healthy Valley Chiropractic"
-            class="h-12 w-12 rounded-2xl border border-slate-200 bg-white object-cover shadow-sm"
+            class="h-12 w-auto max-w-[11rem] object-contain sm:h-14"
           />
-          <div class="leading-tight">
-            <p class="text-sm font-semibold tracking-tight text-slate-950 sm:text-base">Healthy Valley Chiropractic</p>
-            <p class="text-xs uppercase tracking-[0.24em] text-slate-500">State College, PA</p>
-          </div>
         </a>
 
         <nav class="hidden items-center justify-center gap-7 lg:flex" aria-label="Primary navigation">
@@ -79,12 +76,12 @@ const quickLinks = [
         <div class="space-y-8">
           <div class="space-y-4">
             <p class="kicker">{heroHighlights[0]}</p>
-            <h1 class="section-heading max-w-[12ch]">
-              Chiropractic care with a polished local feel
+            <h1 class="section-heading max-w-[13ch]">
+              Chiropractic care that feels calm, polished, and local
             </h1>
             <p class="subcopy max-w-2xl">
-              Healthy Valley Chiropractic brings a calm, professional experience to State College — with a focus on
-              back pain, neck pain, and muscle strain care.
+              Healthy Valley Chiropractic brings a clean, professional experience to State College. The office is built
+              around clear communication, convenient access, and care that is easy to understand from the first visit.
             </p>
           </div>
 
@@ -95,21 +92,19 @@ const quickLinks = [
               rel="noreferrer"
               class="button button-primary"
             >
-              NEW PATIENT SPECIAL OFFER
+              New patient special offer
             </a>
             <a href="#contact" class="button button-secondary">Contact</a>
             <a href={contact.phoneHref} class="button button-secondary">Call now</a>
           </div>
 
-          <div class="panel-soft max-w-4xl p-4 sm:p-5">
-            <div class="grid gap-3 sm:grid-cols-3">
-              {heroStats.map((item) => (
-                <div class="metric-card">
-                  <p class="text-[0.66rem] font-semibold uppercase tracking-[0.3em] text-emerald-700">{item.label}</p>
-                  <p class="mt-2 text-sm font-semibold leading-6 tracking-tight text-slate-800">{item.value}</p>
-                </div>
-              ))}
-            </div>
+          <div class="grid gap-3 sm:grid-cols-3">
+            {heroStats.map((item) => (
+              <div class="metric-card">
+                <p class="text-[0.66rem] font-semibold uppercase tracking-[0.3em] text-emerald-700">{item.label}</p>
+                <p class="mt-2 text-sm font-semibold leading-6 tracking-tight text-slate-800">{item.value}</p>
+              </div>
+            ))}
           </div>
 
           <div class="panel-soft max-w-2xl p-5 sm:p-6">
@@ -121,25 +116,25 @@ const quickLinks = [
               </div>
               <div class="soft-card bg-white">
                 <p class="muted-label">What to expect</p>
-                <p class="mt-2 text-sm leading-6 text-slate-700">Straightforward visits, clear explanations, and a calm setting.</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Clear explanations, practical next steps, and a steady pace.</p>
               </div>
               <div class="soft-card bg-white">
                 <p class="muted-label">Local convenience</p>
-                <p class="mt-2 text-sm leading-6 text-slate-700">Downtown State College access with contact options that are easy to find.</p>
+                <p class="mt-2 text-sm leading-6 text-slate-700">Downtown State College access with easy-to-find contact options.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="grid gap-4 sm:grid-cols-[0.92fr_1.08fr]">
+        <div class="grid gap-4 sm:grid-cols-[1.08fr_0.92fr]">
           <figure class="panel group relative overflow-hidden sm:row-span-2">
             <img
-              src={asset('/images/dr-jay-explaining-decompression.jpg')}
-              alt="Healthy Valley Chiropractic doctor demonstrating decompression"
+              src={asset(heroCards[0].image)}
+              alt={heroCards[0].title}
               class="h-full min-h-[34rem] w-full object-cover transition duration-700 group-hover:scale-[1.02]"
               fetchpriority="high"
             />
-            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/45 via-slate-950/8 to-transparent"></div>
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/52 via-slate-950/8 to-transparent"></div>
             <div class="absolute inset-x-0 bottom-0 p-4 sm:p-5">
               <div class="panel-soft max-w-md bg-white/92 p-4 shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
                 <p class="text-[0.66rem] font-semibold uppercase tracking-[0.3em] text-emerald-700">Healthy Valley Chiropractic</p>
@@ -151,31 +146,39 @@ const quickLinks = [
 
           <figure class="panel overflow-hidden">
             <img
-              src={asset('/images/ig-honor.jpg')}
-              alt="Healthy Valley Chiropractic community recognition image"
+              src={asset(heroCards[1].image)}
+              alt={heroCards[1].title}
               class="h-56 w-full object-cover sm:h-64"
               loading="eager"
             />
+            <figcaption class="space-y-2 p-4 sm:p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-700">{heroCards[1].title}</p>
+              <p class="text-sm leading-6 text-slate-600">{heroCards[1].caption}</p>
+            </figcaption>
           </figure>
 
           <figure class="panel overflow-hidden">
             <img
-              src={asset('/images/services-balance-training@2x.jpg')}
-              alt="Healthy Valley Chiropractic balance training image"
+              src={asset(heroCards[2].image)}
+              alt={heroCards[2].title}
               class="h-56 w-full object-cover sm:h-64"
               loading="eager"
             />
+            <figcaption class="space-y-2 p-4 sm:p-5">
+              <p class="text-xs font-semibold uppercase tracking-[0.28em] text-emerald-700">{heroCards[2].title}</p>
+              <p class="text-sm leading-6 text-slate-600">{heroCards[2].caption}</p>
+            </figcaption>
           </figure>
         </div>
       </div>
     </section>
 
     <section id="about" class="section section-alt pt-4 sm:pt-8 lg:pt-10">
-      <div class="shell grid gap-8 lg:grid-cols-[0.94fr_1.06fr] lg:items-center">
+      <div class="shell grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
         <figure class="panel overflow-hidden">
           <img
-            src={asset('/images/dr-craig-baniszewski.jpg')}
-            alt="Healthy Valley Chiropractic doctor portrait"
+            src={asset('/images/official/testimonial.jpg')}
+            alt="Healthy Valley Chiropractic patient testimonial image"
             class="h-full min-h-[420px] w-full object-cover"
             loading="eager"
           />
@@ -183,7 +186,7 @@ const quickLinks = [
 
         <div>
           <span class="eyebrow">HEALTHY VALLEY CHIROPRACTIC</span>
-          <h2 class="heading section-heading mt-5">Is chiropractic right for you?</h2>
+          <h2 class="heading section-heading mt-5">Personal care, explained clearly</h2>
           <p class="mt-4 text-sm font-medium uppercase tracking-[0.28em] text-slate-500">A closer look at care</p>
 
           <div class="mt-6 flex flex-wrap gap-2">
@@ -207,6 +210,11 @@ const quickLinks = [
               <p class="muted-label">Phone</p>
               <a class="mt-1 block text-base font-semibold text-slate-950" href={contact.phoneHref}>{contact.phone}</a>
             </div>
+          </div>
+
+          <div class="mt-6 soft-card bg-white text-sm leading-7 text-slate-700">
+            <p class="font-semibold text-slate-950">Easy first step</p>
+            <p class="mt-2">Use the patient portal or call the office to start a conversation and plan the next visit.</p>
           </div>
         </div>
       </div>
@@ -258,7 +266,7 @@ const quickLinks = [
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span class="eyebrow">INSIDE THE PRACTICE</span>
-            <h2 class="heading section-heading mt-5">Real photography from the office and community</h2>
+            <h2 class="heading section-heading mt-5">Authentic images from the practice and patient experience</h2>
           </div>
           <p class="text-sm text-slate-500">A clean, real-world look instead of generic stock placeholders.</p>
         </div>
@@ -282,7 +290,7 @@ const quickLinks = [
     </section>
 
     <section id="hours" class="section">
-      <div class="shell grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+      <div class="shell grid gap-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
         <div class="panel bg-white p-6 sm:p-8">
           <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -308,20 +316,13 @@ const quickLinks = [
 
         <div class="grid gap-6">
           <div class="panel overflow-hidden bg-white">
-            <div class="relative">
+            <div class="bg-slate-950 px-6 py-6 sm:px-8">
               <img
-                src={asset('/images/practice-sign.jpg')}
-                alt="Healthy Valley Chiropractic practice sign"
-                class="h-64 w-full object-cover sm:h-72"
-                loading="eager"
+                src={asset('/images/official/hero-banner.png')}
+                alt="Healthy Valley Chiropractic logo banner"
+                class="h-20 w-full object-contain sm:h-24"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/82 via-slate-950/24 to-transparent"></div>
-              <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8">
-                <span class="eyebrow border-white/15 bg-white/10 text-white/90">CONTACT</span>
-                <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Visit Healthy Valley Chiropractic</h2>
-              </div>
             </div>
-
             <div class="space-y-4 p-6 sm:p-8">
               <div class="grid gap-4 text-sm sm:grid-cols-2">
                 <div class="soft-card bg-slate-50">
@@ -346,15 +347,12 @@ const quickLinks = [
           </div>
 
           <div class="panel overflow-hidden bg-white">
-            <img
-              src={asset('/images/dr-jay-explaining-decompression.jpg')}
-              alt="Healthy Valley Chiropractic doctor demonstrating decompression"
-              class="h-64 w-full object-cover sm:h-72"
-              loading="eager"
-            />
             <div class="space-y-4 p-6 sm:p-8">
               <span class="eyebrow">Map</span>
               <p class="text-xl font-semibold tracking-tight text-slate-950">Google Maps</p>
+              <p class="text-sm leading-7 text-slate-600">
+                The office is easy to reach from downtown State College. Use the embedded map or open directions in Google Maps.
+              </p>
               <div class="soft-card overflow-hidden p-0">
                 <iframe
                   title="Healthy Valley Chiropractic location"
@@ -363,10 +361,6 @@ const quickLinks = [
                   referrerpolicy="no-referrer-when-downgrade"
                   class="h-72 w-full border-0"
                 ></iframe>
-              </div>
-              <div class="soft-card bg-slate-50 text-sm leading-7 text-slate-700">
-                <p class="font-semibold text-slate-950">Healthy Valley Chiropractic</p>
-                <p>{contact.address}</p>
               </div>
               <div class="flex flex-wrap gap-3">
                 <a class="button button-primary" href="https://g.page/healthy-valley-chiropractic?share" target="_blank" rel="noreferrer">

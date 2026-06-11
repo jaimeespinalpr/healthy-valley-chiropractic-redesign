@@ -6,7 +6,7 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export const heroHighlights = ['Serving The State College Area', '403 South Allen Street #112A', '(814) 810-3395'];
+export const heroHighlights = ['Serving the State College area', '403 South Allen Street #112A', '(814) 810-3395'];
 
 export const officeHours = [
   { day: 'Monday', hours: ['8:00am - 11:30am', '3:00pm - 5:00pm'] },
@@ -17,46 +17,80 @@ export const officeHours = [
   { day: 'Saturday', hours: ['Closed'] },
 ];
 
-export const benefits = ['Back pain', 'Neck pain', 'Muscle strain'];
+export const benefits = ['Back pain', 'Neck pain', 'Muscle strain', 'Wellness care'];
 
-export const galleryCards = [
-  { image: '/images/dr-craig-baniszewski.jpg', title: 'Dr. Craig Baniszewski', caption: 'The face behind the practice.' },
-  { image: '/images/ig-honor.jpg', title: 'Community recognition', caption: 'Local connections and events.' },
-  { image: '/images/ig-water-cabinet.jpg', title: 'Everyday care moments', caption: 'Small details that feel personal.' },
-  { image: '/images/ig-golf.jpg', title: 'Care in action', caption: 'Active, hands-on treatment.' },
+export const introCopy = [
+  'Healthy Valley Chiropractic serves State College with a calm, easy-to-follow chiropractic experience. The office focuses on making visits straightforward from the first phone call to the final adjustment.',
+  'Whether the goal is easing back pain, addressing neck strain, or keeping up with a wellness routine, the team emphasizes clear communication, practical next steps, and a comfortable setting for every visit.',
+  'If you want a local office that feels polished without feeling impersonal, Healthy Valley Chiropractic is designed to make the process feel simple and welcoming.',
+];
+
+export const heroCards = [
+  {
+    image: '/images/official/corrective-care.jpg',
+    title: 'Corrective care',
+    caption: 'Hands-on treatment in a calm, professional setting.',
+  },
+  {
+    image: '/images/official/meet-the-doctor.jpg',
+    title: 'Meet the doctor',
+    caption: 'A familiar face that helps the first visit feel easy.',
+  },
+  {
+    image: '/images/official/wellness-care.jpg',
+    title: 'Wellness care',
+    caption: 'Support for staying active, aligned, and consistent.',
+  },
 ];
 
 export const services = [
   {
     title: 'Back Pain Treatment',
-    description: 'Focused care for everyday back pain with a clear plan and a calm, professional setting.',
-    image: '/images/dr-jay-explaining-decompression.jpg',
+    description: 'Focused care for everyday back pain with a clear plan and a professional, low-stress experience.',
+    image: '/images/official/corrective-care.jpg',
     href: 'https://www.healthyvalleychiropractic.com/back-pain/',
   },
   {
     title: 'Chiropractic for Kids',
-    description: 'Care tailored to growing bodies, with gentle visits that help families feel comfortable.',
-    image: '/images/services-pediatric-chiropractic@2x.jpg',
+    description: 'Gentle visits and family-friendly care that help younger patients feel comfortable.',
+    image: '/images/dr-adjusting-patient-neck.jpg',
     href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
   },
   {
     title: 'Wellness Care',
-    description: 'Supportive visits for staying on track, moving well, and keeping care consistent over time.',
-    image: '/images/services-pregnancy-chiropractic@2x.jpg',
+    description: 'Supportive maintenance care for keeping movement feeling consistent over time.',
+    image: '/images/official/wellness-care.jpg',
     href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
   },
   {
-    title: 'Balance Training',
-    description: 'Functional movement work that complements hands-on care and everyday stability.',
-    image: '/images/services-balance-training@2x.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
+    title: 'Patient Testimonials',
+    description: 'Real-world feedback that helps new visitors understand the practice experience.',
+    image: '/images/official/testimonial.jpg',
+    href: 'https://www.healthyvalleychiropractic.com/testimonials/',
   },
 ];
 
-export const introCopy = [
-  'Healthy Valley Chiropractic serves the State College area with a straightforward approach to chiropractic care. The goal is simple: make each visit clear, comfortable, and easy to navigate.',
-  'Chiropractic care can be part of a broader plan for muscle strain, neck pain, chronic back pain, and related concerns. The team focuses on alignment, movement, and practical next steps that fit the person in front of them.',
-  'If you are looking for a local office with a calm atmosphere and convenient contact options, Healthy Valley Chiropractic is ready to help you get started.',
+export const galleryCards = [
+  {
+    image: '/images/official/meet-the-doctor.jpg',
+    title: 'Meet the doctor',
+    caption: 'A polished first impression from the start.',
+  },
+  {
+    image: '/images/official/testimonial.jpg',
+    title: 'Testimonials',
+    caption: 'Patient stories that speak to the experience.',
+  },
+  {
+    image: '/images/official/corrective-care.jpg',
+    title: 'Corrective care',
+    caption: 'A treatment room that feels calm and clean.',
+  },
+  {
+    image: '/images/staff-wide.jpg',
+    title: 'Pediatric care',
+    caption: 'Family-friendly care with a gentle touch.',
+  },
 ];
 
 export const supportPoints = [
@@ -64,13 +98,6 @@ export const supportPoints = [
   '403 South Allen Street #112A',
   'State College, PA 16801',
   '(814) 810-3395',
-];
-
-export const aboutLinks = [
-  { label: 'Meet the Doctor', href: 'https://www.healthyvalleychiropractic.com/us/' },
-  { label: 'Testimonials', href: 'https://www.healthyvalleychiropractic.com/testimonials/' },
-  { label: 'Office Tour', href: 'https://www.healthyvalleychiropractic.com/office-tour/' },
-  { label: 'Patient Portal', href: 'https://theschedulingapp.com/HealthyValleyChiropractic' },
 ];
 
 export const quote = {
@@ -99,7 +126,7 @@ export const footerLinks = [
 
 export const socialLinks = [
   { label: 'Facebook', href: 'https://www.facebook.com/Healthy-Valley-Chiropractic-107107287854703' },
-  { label: 'Twitter', href: 'https://twitter.com/healthy_valley' },
+  { label: 'Twitter', href: 'https://twitter.com/healthy_val' },
   { label: 'YouTube', href: 'https://www.youtube.com/channel/UC2IrW2Zr7tKs2SVIDAzsgHw/videos' },
   { label: 'Instagram', href: 'https://www.instagram.com/healthyvalleychiropractic' },
 ];
