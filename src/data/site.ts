@@ -20,37 +20,43 @@ export const officeHours = [
 export const benefits = ['Back pain', 'Neck pain', 'Muscle strain'];
 
 export const galleryCards = [
-  { image: '/images/slide2.jpg', title: 'Warm reception', caption: 'First impressions matter.' },
-  { image: '/images/services-balance-training@2x.jpg', title: 'Balance training', caption: 'Supportive care in motion.' },
+  { image: '/images/dr-craig-baniszewski.jpg', title: 'Dr. Craig Baniszewski', caption: 'The face behind the practice.' },
   { image: '/images/ig-honor.jpg', title: 'Community recognition', caption: 'Local connections and events.' },
+  { image: '/images/ig-water-cabinet.jpg', title: 'Everyday care moments', caption: 'Small details that feel personal.' },
   { image: '/images/ig-golf.jpg', title: 'Care in action', caption: 'Active, hands-on treatment.' },
 ];
 
 export const services = [
   {
     title: 'Back Pain Treatment',
-    description: 'If you are living with chronic back pain then chiropractic care in State College might be a good treatment option.',
-    image: '/images/service-chiropractic-care@2x.jpg',
+    description: 'Focused care for everyday back pain with a clear plan and a calm, professional setting.',
+    image: '/images/dr-jay-explaining-decompression.jpg',
     href: 'https://www.healthyvalleychiropractic.com/back-pain/',
   },
   {
     title: 'Chiropractic for Kids',
-    description: 'A child\'s nervous system is the controller and regulator of all the other systems in their growing body.',
+    description: 'Care tailored to growing bodies, with gentle visits that help families feel comfortable.',
     image: '/images/services-pediatric-chiropractic@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
   },
   {
     title: 'Wellness Care',
-    description: 'Just because you don\'t feel sick, does not mean you feel as great as you could.',
+    description: 'Supportive visits for staying on track, moving well, and keeping care consistent over time.',
     image: '/images/services-pregnancy-chiropractic@2x.jpg',
+    href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
+  },
+  {
+    title: 'Balance Training',
+    description: 'Functional movement work that complements hands-on care and everyday stability.',
+    image: '/images/services-balance-training@2x.jpg',
     href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
   },
 ];
 
 export const introCopy = [
-  'Welcome to Healthy Valley Chiropractic located in State College. Chiropractic is one of the most amazing healthcare professions, but very few people understand what it\'s all about. This article is here to help you gain a basic understanding of how our State College chiropractors can help you and your family.',
-  'Chiropractic care is the practice of using spinal alignment to alleviate a wide variety of physical ailments, including muscle strain, neck pain, chronic back pain, and more. This is accomplished by adjusting the position of the spinal column to its proper shape, providing a non-invasive solution for pain relief.',
-  'At Healthy Valley Chiropractic our chiropractic team is ready to meet with you to discuss your needs. We will help to design a program that is right for you. We look forward to meeting you.',
+  'Healthy Valley Chiropractic serves the State College area with a straightforward approach to chiropractic care. The goal is simple: make each visit clear, comfortable, and easy to navigate.',
+  'Chiropractic care can be part of a broader plan for muscle strain, neck pain, chronic back pain, and related concerns. The team focuses on alignment, movement, and practical next steps that fit the person in front of them.',
+  'If you are looking for a local office with a calm atmosphere and convenient contact options, Healthy Valley Chiropractic is ready to help you get started.',
 ];
 
 export const supportPoints = [
