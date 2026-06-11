@@ -17,7 +17,14 @@ export const officeHours = [
   { day: 'Saturday', hours: ['Closed'] },
 ];
 
-export const benefits = ['BENEFITS', 'HISTORY', 'TRAINING'];
+export const benefits = ['Back pain', 'Neck pain', 'Muscle strain'];
+
+export const galleryCards = [
+  { image: '/images/slide2.jpg', title: 'Warm reception', caption: 'First impressions matter.' },
+  { image: '/images/services-balance-training@2x.jpg', title: 'Balance training', caption: 'Supportive care in motion.' },
+  { image: '/images/ig-honor.jpg', title: 'Community recognition', caption: 'Local connections and events.' },
+  { image: '/images/ig-golf.jpg', title: 'Care in action', caption: 'Active, hands-on treatment.' },
+];
 
 export const services = [
   {
