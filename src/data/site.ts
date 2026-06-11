@@ -25,6 +25,36 @@ export const introCopy = [
   'If you want a local office that feels polished without feeling impersonal, Healthy Valley Chiropractic is designed to make the process feel simple and welcoming.',
 ];
 
+export const visitSteps = [
+  {
+    title: 'Reach out',
+    description: 'Call the office or use the patient portal to start the conversation and get the right next step.',
+  },
+  {
+    title: 'Get oriented',
+    description: 'The first visit is centered on listening carefully, answering questions, and explaining the plan clearly.',
+  },
+  {
+    title: 'Follow through',
+    description: 'Ongoing visits are paced to support comfort, movement, and consistency without adding extra friction.',
+  },
+];
+
+export const practiceValues = [
+  {
+    title: 'Downtown State College',
+    description: 'Easy to find, easy to contact, and built around local convenience for busy schedules.',
+  },
+  {
+    title: 'Family-friendly care',
+    description: 'Gentle visits and clear communication help the office feel welcoming for a wide range of patients.',
+  },
+  {
+    title: 'Clear next steps',
+    description: 'The experience is designed so patients know what is happening and what comes next at each stage.',
+  },
+];
+
 export const heroCards = [
   {
     image: '/images/official/corrective-care.jpg',
@@ -53,7 +83,7 @@ export const services = [
   {
     title: 'Chiropractic for Kids',
     description: 'Gentle visits and family-friendly care that help younger patients feel comfortable.',
-    image: '/images/dr-adjusting-patient-neck.jpg',
+    image: '/images/official/pediatric-care.jpg',
     href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
   },
   {
@@ -87,9 +117,9 @@ export const galleryCards = [
     caption: 'A treatment room that feels calm and clean.',
   },
   {
-    image: '/images/staff-wide.jpg',
-    title: 'Pediatric care',
-    caption: 'Family-friendly care with a gentle touch.',
+    image: '/images/official/pediatric-care.jpg',
+    title: 'Family-friendly visits',
+    caption: 'Gentle care that keeps younger patients at ease.',
   },
 ];
 

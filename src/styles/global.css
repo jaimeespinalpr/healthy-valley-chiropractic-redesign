@@ -139,6 +139,22 @@
     @apply rounded-[1.35rem] border border-slate-200/80 bg-white/95 px-4 py-4 shadow-[0_16px_38px_rgba(15,23,42,0.06)];
   }
 
+  .value-card {
+    @apply rounded-[1.6rem] border border-slate-200/80 bg-white px-5 py-5 shadow-[0_16px_40px_rgba(15,23,42,0.06)];
+  }
+
+  .step-card {
+    @apply rounded-[1.6rem] border border-slate-200/80 bg-slate-50 px-5 py-5 shadow-[0_12px_30px_rgba(15,23,42,0.05)];
+  }
+
+  .eyebrow-small {
+    @apply text-[0.66rem] font-semibold uppercase tracking-[0.32em] text-slate-400;
+  }
+
+  .fine-print {
+    @apply text-sm leading-7 text-slate-500;
+  }
+
   .section-heading {
     @apply max-w-2xl text-3xl leading-[1.02] sm:text-4xl lg:text-5xl;
   }

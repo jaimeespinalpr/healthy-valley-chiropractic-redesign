@@ -2,6 +2,7 @@
 import '../styles/global.css';
 
 const base = import.meta.env.BASE_URL;
+const siteUrl = 'https://jaimeespinalpr.github.io/healthy-valley-chiropractic-redesign/';
 
 const {
   title = 'Healthy Valley Chiropractic | State College, PA',
@@ -9,7 +10,8 @@ const {
   image = 'images/official/meet-the-doctor.jpg',
 } = Astro.props;
 
-const imageUrl = `${base}${image.replace(/^\//, '')}`;
+const imagePath = `${base}${image.replace(/^\//, '')}`;
+const imageUrl = new URL(imagePath, siteUrl).href;
 ---
 
 <!doctype html>
@@ -20,6 +22,8 @@ const imageUrl = `${base}${image.replace(/^\//, '')}`;
     <meta name="description" content={description} />
     <meta name="theme-color" content="#f8faf8" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:site_name" content="Healthy Valley Chiropractic" />
+    <meta property="og:url" content={siteUrl} />
     <link rel="icon" href={`${base}images/favicon-square.jpg`} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
