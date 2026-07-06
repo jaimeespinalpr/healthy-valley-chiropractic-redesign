@@ -39,7 +39,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
         </p>
 
         <div class="mt-9 flex flex-wrap items-center gap-3" data-reveal style="--reveal-delay: 240ms">
-          <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
+          <a href={`${base}new-patient/`} class="button button-primary">
             Schedule an appointment
           </a>
           <a href={`${base}special/`} class="button button-accent">New patient special</a>
@@ -154,7 +154,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
           see how it works and who it helps.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
+          <a href={`${base}new-patient/`} class="button button-primary">
             Book a visit
           </a>
           <a href="#contact" class="button button-ghost">Ask a question</a>
@@ -435,8 +435,8 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
             </a>
           </div>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
-              Patient portal
+            <a href={`${base}new-patient/`} class="button button-primary">
+              Schedule a visit
             </a>
             <a href={contact.mapsLink} target="_blank" rel="noreferrer" class="button button-ghost">
               Get directions
