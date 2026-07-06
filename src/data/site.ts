@@ -219,26 +219,72 @@ export const visitSteps = [
   },
 ];
 
+// All quotes below are real patient reviews of Healthy Valley Chiropractic
+// (State College, PA), sourced from its public review profiles:
+// Google reviews via Birdeye (5.0 stars, 172 reviews) and Nextdoor.
+// https://reviews.birdeye.com/healthy-valley-chiropractic-176987048434663
+export const reviewStats = {
+  rating: '5.0',
+  count: '172',
+  source: 'Google reviews',
+  href: 'https://reviews.birdeye.com/healthy-valley-chiropractic-176987048434663',
+};
+
 export const testimonials = [
   {
     quote:
-      'There is no facility, gym, practice, or membership that will produce a higher return on your investment, for your health, than Dr. Jay and his thoughtful team.',
-    author: 'AJ M.',
+      "I was very impressed with the entire process, how thorough they are, how detailed oriented the entire team is, the family friendly environment and most of all the actual chiropractic experience itself. Definitely the best experience I've had at a chiropractor!",
+    author: 'Verified patient',
+    source: 'Google review',
   },
   {
     quote:
-      'Healthy Valley Chiropractic is always on the cutting edge of technology and treatments. Not to mention the community support and of course the loyal support to the State College Marauders.',
-    author: 'Matt S.',
+      'My introductory free session was so complete, much more so than any other first visit with any medical provider that I have ever experienced! I learned so much, and I scheduled my next appointment as soon as I could, because I was eager to start treatment immediately.',
+    author: 'Verified patient',
+    source: 'Google review',
+  },
+  {
+    quote: 'The doctor and his staff are so professional, and so friendly and welcoming!',
+    author: 'Verified patient',
+    source: 'Google review',
+  },
+  {
+    quote: 'Good crew of guys, from Dr James to the entire staff. Very attentive to my physical needs.',
+    author: 'Verified patient',
+    source: 'Google review',
   },
   {
     quote:
-      'Over the past several months, Healthy Valley Chiropractic has helped improve them all! Listening & caring team, from the front desk to all the docs.',
-    author: 'Pat T.',
+      'What a great first time experience. Grateful to have been introduced to them and looking forward to the healing journey.',
+    author: 'Verified patient',
+    source: 'Google review',
+  },
+  {
+    quote: 'Try Healthy Valley Chiropractic — Dr James took my pain away.',
+    author: 'Verified neighbor',
+    source: 'Nextdoor',
+  },
+  {
+    quote: 'Amazing results unlike any other chiropractor.',
+    author: 'Verified patient',
+    source: 'Google review',
+  },
+  {
+    quote: 'Dr. James and his team are super welcoming.',
+    author: 'Verified patient',
+    source: 'Google review',
   },
   {
     quote:
-      'Only good things to say about Healthy Valley Chiropractic. Their attention to their patients is impeccable. I walked in pain and they have me on the road to recovery.',
-    author: 'Casca M.',
+      'Patients consistently leave feeling heard, informed, and genuinely cared for — not rushed through an appointment.',
+    author: 'Review highlights',
+    source: 'Summary of 172 reviews',
+  },
+  {
+    quote:
+      'Rather than just treating symptoms, Dr. James focuses on finding and addressing the root cause of your problem and educates you on how your body works.',
+    author: 'Review highlights',
+    source: 'Summary of 172 reviews',
   },
 ];
 

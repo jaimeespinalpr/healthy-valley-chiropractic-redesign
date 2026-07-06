@@ -251,6 +251,27 @@
     @apply flex items-center justify-between gap-4 border-b border-white/10 py-4 last:border-b-0;
   }
 
+  /* ---- Testimonial carousel ---- */
+  .carousel-track {
+    @apply flex gap-5 overflow-x-auto pb-3;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-slide {
+    @apply shrink-0 snap-start;
+    width: min(26rem, 82vw);
+  }
+
+  .carousel-btn {
+    @apply inline-flex h-12 w-12 items-center justify-center rounded-full border border-brand-900/15 bg-white text-brand-900 shadow-[0_10px_26px_rgba(17,31,48,0.1)] transition hover:-translate-y-0.5 hover:border-brand-900/35 disabled:opacity-40;
+  }
+
   /* ---- Parallax band ---- */
   .parallax-band {
     background-attachment: fixed;
