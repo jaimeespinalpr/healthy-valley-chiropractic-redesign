@@ -22,6 +22,7 @@ export const marqueeItems = [
   'Back pain',
   'Neck pain',
   'Spinal decompression',
+  'Neuropathy',
   'Sports injuries',
   'Pregnancy care',
   'Pediatric care',
