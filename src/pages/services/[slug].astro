@@ -49,11 +49,7 @@ const otherServices = services.filter((s) => s.slug !== service.slug);
   <section class="section bg-white !pt-16">
     <div class="shell-wide grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
       <figure class="overflow-hidden rounded-[2.5rem] shadow-[0_30px_80px_rgba(17,31,48,0.18)] lg:sticky lg:top-28" data-reveal>
-        <img
-          src={asset(service.image)}
-          alt={service.title}
-          class={`h-full max-h-[34rem] w-full object-cover ${service.image.includes('hero-decompression') ? 'object-right' : ''}`}
-        />
+        <img src={asset(service.image)} alt={service.title} class="h-full max-h-[34rem] w-full object-cover" />
       </figure>
 
       <div data-reveal style="--reveal-delay: 100ms">

@@ -22,21 +22,11 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
   description="Healthy Valley Chiropractic blends hands-on corrective care, wellness care, and family-friendly chiropractic in downtown State College, Pennsylvania."
 >
   <!-- ===== Hero ===== -->
-  <section class="relative flex min-h-[100svh] items-center overflow-hidden">
-    <img
-      src={asset('/images/hero-decompression.jpg')}
-      alt="Spinal decompression treatment at Healthy Valley Chiropractic"
-      class="absolute inset-0 h-full w-full object-cover object-[72%_center]"
-      fetchpriority="high"
-    />
-    <div
-      class="absolute inset-0 bg-[linear-gradient(90deg,#f6f8fb_18%,rgba(246,248,251,0.88)_42%,rgba(246,248,251,0.25)_68%,transparent_85%)]"
-    >
-    </div>
-    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f6f8fb] to-transparent"></div>
-    <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#f6f8fb]/95 via-[#f6f8fb]/55 to-transparent"></div>
+  <section class="relative flex items-center overflow-hidden lg:min-h-[100svh]">
+    <div class="pointer-events-none absolute -right-48 -top-48 h-[36rem] w-[36rem] rounded-full bg-mint-100 blur-3xl"></div>
+    <div class="pointer-events-none absolute -left-48 bottom-0 h-[28rem] w-[28rem] rounded-full bg-leaf-100 blur-3xl"></div>
 
-    <div class="shell-wide relative z-10 pb-28 pt-32 sm:pt-36">
+    <div class="shell-wide relative z-10 grid items-center gap-14 pb-20 pt-32 sm:pt-40 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:pb-28">
       <div class="max-w-2xl">
         <p class="eyebrow" data-reveal>State College, Pennsylvania</p>
         <h1 class="display mt-5 text-5xl leading-[1.02] text-brand-950 sm:text-6xl lg:text-7xl" data-reveal style="--reveal-delay: 80ms">
@@ -70,11 +60,37 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
           </span>
         </div>
       </div>
+
+      <div class="relative mx-auto w-full max-w-lg lg:justify-self-end" data-reveal style="--reveal-delay: 200ms">
+        <div class="absolute -left-7 -top-7 h-44 w-44 rounded-[2.5rem] bg-leaf-300/50"></div>
+        <div class="absolute -bottom-9 -right-7 h-52 w-52 rounded-full bg-mint-300/45"></div>
+        <figure class="relative overflow-hidden rounded-[2.5rem] shadow-[0_36px_90px_rgba(17,31,48,0.24)]">
+          <img
+            src={asset('/images/corrective-care.jpg')}
+            alt="Hands-on chiropractic care at Healthy Valley Chiropractic"
+            class="aspect-[4/5] w-full object-cover"
+            fetchpriority="high"
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-950/45 via-transparent to-transparent"></div>
+          <figcaption class="absolute inset-x-0 bottom-0 p-6">
+            <p class="text-[0.62rem] font-extrabold uppercase tracking-[0.3em] text-leaf-400">Healthy Valley Chiropractic</p>
+            <p class="display mt-1.5 text-xl text-white">Hands-on care, explained clearly</p>
+          </figcaption>
+        </figure>
+        <div class="absolute -left-5 top-8 hidden rounded-2xl bg-white px-5 py-4 shadow-[0_20px_50px_rgba(17,31,48,0.18)] sm:block">
+          <p class="text-[0.6rem] font-extrabold uppercase tracking-[0.26em] text-brand-500">Downtown</p>
+          <p class="display mt-0.5 text-base text-brand-950">State College, PA</p>
+        </div>
+        <div class="absolute -right-4 bottom-14 hidden rounded-2xl bg-brand-950 px-5 py-4 shadow-[0_20px_50px_rgba(17,31,48,0.3)] sm:block">
+          <p class="text-[0.6rem] font-extrabold uppercase tracking-[0.26em] text-leaf-400">Call today</p>
+          <a href={contact.phoneHref} class="display mt-0.5 block text-base text-white hover:text-leaf-300">{contact.phone}</a>
+        </div>
+      </div>
     </div>
 
     <a
       href="#experience"
-      class="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-[0.65rem] font-extrabold uppercase tracking-[0.3em] text-brand-800/60 hover:text-brand-900 md:flex"
+      class="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-[0.65rem] font-extrabold uppercase tracking-[0.3em] text-brand-800/60 hover:text-brand-900 lg:flex"
       aria-label="Scroll to explore"
     >
       Explore
@@ -313,7 +329,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
   <!-- ===== Welcome band ===== -->
   <section
     class="parallax-band relative"
-    style={`background-image: url('${asset('/images/front-desk-welcome.jpg')}')`}
+    style={`background-image: url('${asset('/images/community-honor.jpg')}')`}
   >
     <div class="absolute inset-0 bg-brand-950/68"></div>
     <div class="shell relative z-10 py-28 text-center sm:py-36">
