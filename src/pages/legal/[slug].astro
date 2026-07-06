@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { contact, legalPages } from '../../data/site';
+
+export function getStaticPaths() {
+  return legalPages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={`${page.title} | Healthy Valley Chiropractic`} description={page.paragraphs[0]}>
+  <section class="relative overflow-hidden pb-12 pt-36 sm:pt-44">
+    <div class="pointer-events-none absolute -right-40 -top-40 h-[28rem] w-[28rem] rounded-full bg-mint-100 blur-3xl"></div>
+    <div class="shell relative">
+      <nav class="text-xs font-extrabold uppercase tracking-[0.24em] text-brand-400" aria-label="Breadcrumb" data-reveal>
+        <a href={base} class="hover:text-brand-700">Home</a>
+        <span class="mx-2 text-brand-300">/</span>
+        <span class="text-brand-700">{page.title}</span>
+      </nav>
+      <h1 class="display mt-6 max-w-3xl text-5xl leading-[1.04] text-brand-950 sm:text-6xl" data-reveal style="--reveal-delay: 80ms">
+        {page.title}
+      </h1>
+    </div>
+  </section>
+
+  <section class="section bg-white !pt-14">
+    <div class="shell">
+      <div class="max-w-3xl space-y-6" data-reveal>
+        {page.paragraphs.map((paragraph) => (
+          <p class="text-base leading-8 text-brand-800/80 sm:text-lg">{paragraph}</p>
+        ))}
+      </div>
+
+      <div class="mt-12 max-w-3xl rounded-[2rem] border border-brand-900/8 bg-brand-50 p-7 sm:p-8" data-reveal>
+        <h2 class="display text-2xl text-brand-950">Questions?</h2>
+        <p class="mt-3 text-base leading-7 text-brand-800/75">
+          Call the office at
+          <a href={contact.phoneHref} class="font-bold text-brand-700 hover:text-brand-900">{contact.phone}</a>
+          or visit us at {contact.addressLine1}, {contact.addressLine2}.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

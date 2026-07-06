@@ -1,0 +1,57 @@
+---
+import { contact, navLinks } from '../data/site';
+
+const base = import.meta.env.BASE_URL;
+const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
+---
+
+<header class="site-header" id="site-header">
+  <div class="shell-wide header-inner flex items-center justify-between gap-4 py-4">
+    <a href={base} class="flex shrink-0 items-center" aria-label="Healthy Valley Chiropractic — home">
+      <img src={asset('/images/logo.png')} alt="Healthy Valley Chiropractic" class="h-12 w-auto sm:h-14" />
+    </a>
+
+    <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
+      {navLinks.map((link) => <a href={`${base}#${link.anchor}`} class="nav-link">{link.label}</a>)}
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href={contact.phoneHref} class="hidden text-sm font-extrabold text-brand-900 hover:text-brand-700 md:block">
+        {contact.phone}
+      </a>
+      <a
+        href={contact.schedulingLink}
+        target="_blank"
+        rel="noreferrer"
+        class="button button-primary hidden !px-5 !py-2.5 text-xs sm:inline-flex"
+      >
+        Schedule
+      </a>
+      <button
+        id="menu-toggle"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-900/15 bg-white/70 backdrop-blur lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Open menu"
+      >
+        <svg class="h-5 w-5 text-brand-900" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path class="menu-icon-open" d="M3 6h14M3 10h14M3 14h14" />
+          <path class="menu-icon-close hidden" d="M5 5l10 10M15 5L5 15" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t border-brand-900/10 bg-white/95 backdrop-blur-xl lg:hidden">
+    <nav class="shell flex flex-col gap-1 py-4" aria-label="Mobile navigation">
+      {navLinks.map((link) => (
+        <a href={`${base}#${link.anchor}`} class="rounded-2xl px-4 py-3 text-base font-bold text-brand-900 hover:bg-brand-50">
+          {link.label}
+        </a>
+      ))}
+      <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary mt-3">
+        Schedule an appointment
+      </a>
+    </nav>
+  </div>
+</header>
