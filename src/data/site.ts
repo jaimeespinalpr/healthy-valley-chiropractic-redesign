@@ -1,28 +1,100 @@
+const officialSite = 'https://www.healthyvalleychiropractic.com';
+
 export const navLinks = [
-  { label: 'Home', href: '#top' },
-  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Services', href: '#services' },
+  { label: 'The Doctor', href: '#doctor' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Hours', href: '#hours' },
   { label: 'Contact', href: '#contact' },
 ];
 
-export const heroHighlights = ['Serving the State College area', '403 South Allen Street #112A', '(814) 810-3395'];
+export const contact = {
+  phone: '(814) 810-3395',
+  phoneHref: 'tel:+18148103395',
+  addressLine1: '403 South Allen Street #112A',
+  addressLine2: 'State College, PA 16801',
+  mapSrc:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.120368016191!2d-77.85822257924526!3d40.79278210699225!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cea9df5576504b%3A0x347b429e5d1100ba!2sHealthy%20Valley%20Chiropractic!5e0!3m2!1sen!2sus!4v1604334861160!5m2!1sen!2sus',
+  mapsLink: 'https://g.page/healthy-valley-chiropractic?share',
+  schedulingLink: 'https://theschedulingapp.com/HealthyValleyChiropractic',
+  specialOfferLink: `${officialSite}/special/`,
+  contactPageLink: `${officialSite}/contact-us/`,
+  reviewLink: `${officialSite}/review-us/`,
+};
 
-export const officeHours = [
-  { day: 'Monday', hours: ['8:00am - 11:30am', '3:00pm - 5:00pm'] },
-  { day: 'Tuesday', hours: ['3:00pm - 5:00pm'] },
-  { day: 'Wednesday', hours: ['8:00am - 11:30am', '3:00pm - 5:00pm'] },
-  { day: 'Thursday', hours: ['3:00pm - 5:00pm'] },
-  { day: 'Friday', hours: ['8:00am - 11:30am'] },
-  { day: 'Saturday', hours: ['Closed'] },
+export const marqueeItems = [
+  'Back pain',
+  'Neck pain',
+  'Spinal decompression',
+  'Sports injuries',
+  'Pregnancy care',
+  'Pediatric care',
+  'Workplace injuries',
+  'Auto accidents',
+  'Wellness care',
+  'Extremity adjusting',
 ];
 
-export const benefits = ['Back pain', 'Neck pain', 'Muscle strain', 'Wellness care'];
+export const pillars = [
+  {
+    title: 'Corrective Care',
+    caption: 'Hands-on treatment focused on lasting correction, not just quick relief.',
+    image: '/images/official/corrective-care.jpg',
+  },
+  {
+    title: 'Wellness Care',
+    caption: 'Ongoing support to keep you moving, aligned, and feeling your best.',
+    image: '/images/official/wellness-care.jpg',
+  },
+  {
+    title: 'Pediatric Care',
+    caption: 'Gentle, family-friendly visits that put younger patients at ease.',
+    image: '/images/official/pediatric-care.jpg',
+  },
+];
 
-export const introCopy = [
-  'Healthy Valley Chiropractic serves State College with a calm, easy-to-follow chiropractic experience. The office focuses on making visits straightforward from the first phone call to the final adjustment.',
-  'Whether the goal is easing back pain, addressing neck strain, or keeping up with a wellness routine, the team emphasizes clear communication, practical next steps, and a comfortable setting for every visit.',
-  'If you want a local office that feels polished without feeling impersonal, Healthy Valley Chiropractic is designed to make the process feel simple and welcoming.',
+export const services = [
+  {
+    title: 'Chiropractic Care',
+    description: 'Foundational care for pain relief, mobility, and long-term wellbeing.',
+    href: `${officialSite}/chiropractic-care/`,
+  },
+  {
+    title: 'Spinal Decompression',
+    description: 'A specialized option for disc issues and chronic back pain.',
+    href: `${officialSite}/spinal-decompression/`,
+  },
+  {
+    title: 'Pediatric Chiropractic',
+    description: 'A warm, family-first approach for children and teens.',
+    href: `${officialSite}/pediatric/`,
+  },
+  {
+    title: 'Sports Chiropractic',
+    description: 'Support for athletes — training, performance, and recovery.',
+    href: `${officialSite}/sports-chiropractic/`,
+  },
+  {
+    title: 'Pregnancy Care',
+    description: 'Gentle care for the changes of pregnancy and posture.',
+    href: `${officialSite}/pregnancy/`,
+  },
+  {
+    title: 'Workplace Injuries',
+    description: 'Practical help for pain from work, posture, and daily strain.',
+    href: `${officialSite}/workplace-injuries/`,
+  },
+  {
+    title: 'Auto Accident Care',
+    description: 'A clear next step for recovery after a car accident.',
+    href: `${officialSite}/auto-accident-chiropractic-care/`,
+  },
+  {
+    title: 'Extremity Adjusting',
+    description: 'Care for hands, shoulders, hips, knees, and ankles.',
+    href: `${officialSite}/extremity-adjusting/`,
+  },
 ];
 
 export const visitSteps = [
@@ -36,122 +108,78 @@ export const visitSteps = [
   },
   {
     title: 'Follow through',
-    description: 'Ongoing visits are paced to support comfort, movement, and consistency without adding extra friction.',
+    description: 'Ongoing visits are paced to support comfort, movement, and consistency without extra friction.',
   },
 ];
 
-export const practiceValues = [
+export const testimonials = [
   {
-    title: 'Downtown State College',
-    description: 'Easy to find, easy to contact, and built around local convenience for busy schedules.',
+    quote:
+      'There is no facility, gym, practice, or membership that will produce a higher return on your investment, for your health, than Dr. Jay and his thoughtful team.',
+    author: 'AJ M.',
   },
   {
-    title: 'Family-friendly care',
-    description: 'Gentle visits and clear communication help the office feel welcoming for a wide range of patients.',
+    quote:
+      'Healthy Valley Chiropractic is always on the cutting edge of technology and treatments. Not to mention the community support and of course the loyal support to the State College Marauders.',
+    author: 'Matt S.',
   },
   {
-    title: 'Clear next steps',
-    description: 'The experience is designed so patients know what is happening and what comes next at each stage.',
-  },
-];
-
-export const heroCards = [
-  {
-    image: '/images/official/corrective-care.jpg',
-    title: 'Corrective care',
-    caption: 'Hands-on treatment in a calm, professional setting.',
+    quote:
+      'Over the past several months, Healthy Valley Chiropractic has helped improve them all! Listening & caring team, from the front desk to all the docs.',
+    author: 'Pat T.',
   },
   {
-    image: '/images/official/meet-the-doctor.jpg',
-    title: 'Meet the doctor',
-    caption: 'A familiar face that helps the first visit feel easy.',
-  },
-  {
-    image: '/images/official/wellness-care.jpg',
-    title: 'Wellness care',
-    caption: 'Support for staying active, aligned, and consistent.',
+    quote:
+      'Only good things to say about Healthy Valley Chiropractic. Their attention to their patients is impeccable. I walked in pain and they have me on the road to recovery.',
+    author: 'Casca M.',
   },
 ];
 
-export const services = [
+export const galleryItems = [
   {
-    title: 'Back Pain Treatment',
-    description: 'Focused care for everyday back pain with a clear plan and a professional, low-stress experience.',
-    image: '/images/official/corrective-care.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/back-pain/',
+    image: '/images/ig-golf.jpg',
+    title: 'In the treatment room',
+    caption: 'Hands-on care, every visit.',
+    span: 'lg:row-span-2',
   },
   {
-    title: 'Chiropractic for Kids',
-    description: 'Gentle visits and family-friendly care that help younger patients feel comfortable.',
-    image: '/images/official/pediatric-care.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/chiropractic-care-kids/',
+    image: '/images/ig-honor.jpg',
+    title: 'Rooted in the community',
+    caption: 'Celebrating local sports and the people behind them.',
+    span: 'lg:col-span-2',
   },
   {
-    title: 'Wellness Care',
-    description: 'Supportive maintenance care for keeping movement feeling consistent over time.',
-    image: '/images/official/wellness-care.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/wellness-care/',
-  },
-  {
-    title: 'Patient Testimonials',
-    description: 'Real-world feedback that helps new visitors understand the practice experience.',
-    image: '/images/official/testimonial.jpg',
-    href: 'https://www.healthyvalleychiropractic.com/testimonials/',
+    image: '/images/services-balance-training@2x.jpg',
+    title: 'Movement & balance',
+    caption: 'Care that supports an active life.',
+    span: 'lg:col-span-2',
   },
 ];
 
-export const galleryCards = [
-  {
-    image: '/images/official/meet-the-doctor.jpg',
-    title: 'Meet the doctor',
-    caption: 'A polished first impression from the start.',
-  },
-  {
-    image: '/images/official/testimonial.jpg',
-    title: 'Testimonials',
-    caption: 'Patient stories that speak to the experience.',
-  },
-  {
-    image: '/images/official/corrective-care.jpg',
-    title: 'Corrective care',
-    caption: 'A treatment room that feels calm and clean.',
-  },
-  {
-    image: '/images/official/pediatric-care.jpg',
-    title: 'Family-friendly visits',
-    caption: 'Gentle care that keeps younger patients at ease.',
-  },
-];
-
-export const supportPoints = [
-  'Healthy Valley Chiropractic',
-  '403 South Allen Street #112A',
-  'State College, PA 16801',
-  '(814) 810-3395',
+export const officeHours = [
+  { day: 'Monday', hours: ['8:00am – 11:30am', '3:00pm – 5:00pm'] },
+  { day: 'Tuesday', hours: ['3:00pm – 5:00pm'] },
+  { day: 'Wednesday', hours: ['8:00am – 11:30am', '3:00pm – 5:00pm'] },
+  { day: 'Thursday', hours: ['3:00pm – 5:00pm'] },
+  { day: 'Friday', hours: ['8:00am – 11:30am'] },
+  { day: 'Saturday', hours: ['Closed'] },
+  { day: 'Sunday', hours: ['Closed'] },
 ];
 
 export const quote = {
-  author: 'HIPPOCRATES',
+  author: 'Hippocrates',
   text: 'A wise man ought to realize that his health is his most valuable possession.',
 };
 
-export const contact = {
-  phone: '(814) 810-3395',
-  phoneHref: 'tel:+181' + '48103395',
-  address: '403 South Allen Street #112A, State College, PA 16801',
-  mapSrc:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.120368016191!2d-77.85822257924526!3d40.79278210699225!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x89cea9df5576504b%3A0x347b429e5d1100ba!2sHealthy%20Valley%20Chiropractic!5e0!3m2!1sen!2sus!4v1604334861160!5m2!1sen!2sus',
-};
-
 export const footerLinks = [
-  { label: 'Accessibility', href: 'https://www.healthyvalleychiropractic.com/accessibility/' },
-  { label: 'Anti-Discrimination', href: 'https://www.healthyvalleychiropractic.com/anti-discrimination/' },
-  { label: 'Healthcare Disclaimer', href: 'https://www.healthyvalleychiropractic.com/healthcare-disclaimer/' },
-  { label: 'HIPAA Policy', href: 'https://www.healthyvalleychiropractic.com/hipaa-privacy-policy/' },
-  { label: 'Privacy Policy', href: 'https://www.healthyvalleychiropractic.com/privacy-policy/' },
-  { label: 'Terms of Service', href: 'https://www.healthyvalleychiropractic.com/terms-service/' },
-  { label: 'Good Faith Estimate', href: 'https://www.healthyvalleychiropractic.com/good-faith-estimate/' },
-  { label: 'AI Generated Content Disclaimer', href: 'https://www.healthyvalleychiropractic.com/ai-generated-content-disclaimer/' },
+  { label: 'Accessibility', href: `${officialSite}/accessibility/` },
+  { label: 'Anti-Discrimination', href: `${officialSite}/anti-discrimination/` },
+  { label: 'Healthcare Disclaimer', href: `${officialSite}/healthcare-disclaimer/` },
+  { label: 'HIPAA Policy', href: `${officialSite}/hipaa-privacy-policy/` },
+  { label: 'Privacy Policy', href: `${officialSite}/privacy-policy/` },
+  { label: 'Terms of Service', href: `${officialSite}/terms-service/` },
+  { label: 'Good Faith Estimate', href: `${officialSite}/good-faith-estimate/` },
+  { label: 'AI Content Disclaimer', href: `${officialSite}/ai-generated-content-disclaimer/` },
 ];
 
 export const socialLinks = [
