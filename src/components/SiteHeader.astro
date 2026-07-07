@@ -20,9 +20,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
         {contact.phone}
       </a>
       <a
-        href={contact.schedulingLink}
-        target="_blank"
-        rel="noreferrer"
+        href={`${base}new-patient/`}
         class="button button-primary hidden !px-5 !py-2.5 text-xs sm:inline-flex"
       >
         Schedule
@@ -49,7 +47,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
           {link.label}
         </a>
       ))}
-      <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary mt-3">
+      <a href={`${base}new-patient/`} class="button button-primary mt-3">
         Schedule an appointment
       </a>
     </nav>

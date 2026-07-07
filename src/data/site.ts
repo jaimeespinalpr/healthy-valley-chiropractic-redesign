@@ -22,6 +22,7 @@ export const marqueeItems = [
   'Back pain',
   'Neck pain',
   'Spinal decompression',
+  'Neuropathy',
   'Sports injuries',
   'Pregnancy care',
   'Pediatric care',
@@ -73,7 +74,7 @@ export const services = [
     slug: 'spinal-decompression',
     title: 'Spinal Decompression',
     description: 'A specialized option for disc issues and chronic back pain.',
-    image: '/images/corrective-care.jpg',
+    image: '/images/spinal-decompression.jpg',
     intro:
       'Spinal decompression is a gentle, non-surgical therapy designed to relieve pressure on the discs of the spine — a specialized option when everyday back pain has deeper roots.',
     paragraphs: [

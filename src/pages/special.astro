@@ -30,7 +30,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
       </p>
       <div class="mt-9 flex flex-wrap gap-3" data-reveal style="--reveal-delay: 240ms">
         <a href={contact.phoneHref} class="button button-accent">Call {contact.phone}</a>
-        <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
+        <a href={`${base}new-patient/`} class="button button-primary">
           Schedule online
         </a>
       </div>
@@ -113,8 +113,8 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
           </a>
         </div>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
-            Patient portal
+          <a href={`${base}new-patient/`} class="button button-primary">
+            Schedule a visit
           </a>
           <a href={`${base}#services`} class="button button-ghost">Explore services</a>
         </div>

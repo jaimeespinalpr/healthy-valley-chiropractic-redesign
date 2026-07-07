@@ -39,7 +39,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
         </p>
 
         <div class="mt-9 flex flex-wrap items-center gap-3" data-reveal style="--reveal-delay: 240ms">
-          <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
+          <a href={`${base}new-patient/`} class="button button-primary">
             Schedule an appointment
           </a>
           <a href={`${base}special/`} class="button button-accent">New patient special</a>
@@ -144,51 +144,30 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
   </section>
 
   <!-- ===== Services ===== -->
-  <section id="services" class="section bg-white">
-    <div class="shell-wide grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-      <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
+  <section id="services" class="section">
+    <div class="shell-wide">
+      <div class="max-w-3xl" data-reveal>
         <p class="eyebrow">Services</p>
-        <h2 class="section-title">Chiropractic care can help</h2>
-        <p class="section-copy">
-          Eight focused services, one goal: helping you move and feel better for the long run. Explore each one to
-          see how it works and who it helps.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
-            Book a visit
-          </a>
-          <a href="#contact" class="button button-ghost">Ask a question</a>
-        </div>
+        <h2 class="section-title">Our Services</h2>
       </div>
 
-      <div>
+      <div class="mt-12 space-y-5">
         {services.map((service, index) => (
           <a
             href={`${base}services/${service.slug}/`}
-            class="service-row group"
+            class="group relative block overflow-hidden rounded-2xl h-48 sm:h-56 shadow-lg transition duration-300 hover:shadow-xl hover:-translate-y-1"
             data-reveal
-            style={`--reveal-delay: ${(index % 4) * 70}ms`}
+            style={`--reveal-delay: ${index * 80}ms`}
           >
-            <span class="display text-lg text-brand-300 transition group-hover:text-leaf-600 sm:text-xl">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-            <span class="flex-1">
-              <span class="display block text-2xl text-brand-950 transition group-hover:text-brand-700 sm:text-3xl">
-                {service.title}
-              </span>
-              <span class="mt-1.5 block text-sm leading-6 text-brand-800/65 sm:text-base">{service.description}</span>
-            </span>
-            <svg
-              class="h-5 w-5 shrink-0 self-center text-brand-300 transition duration-300 group-hover:-rotate-45 group-hover:text-leaf-600"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M4 10h12m0 0l-5-5m5 5l-5 5" />
-            </svg>
+            <img
+              src={asset(service.image)}
+              alt={service.title}
+              class={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110 ${service.slug === 'spinal-decompression' ? 'animate-bounce-slow' : ''}`}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-brand-950/30 to-brand-950/20"></div>
+            <div class="relative h-full flex items-center px-6 sm:px-8">
+              <h3 class="display text-3xl sm:text-4xl text-white drop-shadow-lg">{service.title}</h3>
+            </div>
           </a>
         ))}
       </div>
@@ -435,8 +414,8 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
             </a>
           </div>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href={contact.schedulingLink} target="_blank" rel="noreferrer" class="button button-primary">
-              Patient portal
+            <a href={`${base}new-patient/`} class="button button-primary">
+              Schedule a visit
             </a>
             <a href={contact.mapsLink} target="_blank" rel="noreferrer" class="button button-ghost">
               Get directions
