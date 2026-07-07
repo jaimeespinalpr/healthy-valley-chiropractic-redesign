@@ -162,7 +162,7 @@ const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
             <img
               src={asset(service.image)}
               alt={service.title}
-              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              class={`absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110 ${service.slug === 'spinal-decompression' ? 'animate-bounce-slow' : ''}`}
             />
             <div class="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-brand-950/30 to-brand-950/20"></div>
             <div class="relative h-full flex items-center px-6 sm:px-8">
